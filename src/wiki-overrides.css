@@ -1,0 +1,164 @@
+.wiki-shell .window-frame {
+  min-height: calc(100vh - 48px);
+}
+
+.wiki-script-window {
+  padding-top: 150px;
+}
+
+.wiki-hero {
+  width: min(1180px, 100%);
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.wiki-hero .app-logo {
+  width: 108px;
+}
+
+.wiki-hero h1 {
+  font-size: clamp(42px, 4.8vw, 74px);
+}
+
+.wiki-hero p {
+  display: block;
+  margin: 8px 0 0;
+  color: #667085;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.wiki-script-window.is-working .wiki-hero,
+.wiki-script-window.has-result .wiki-hero {
+  display: none;
+}
+
+.wiki-prompt-shell {
+  width: min(1180px, calc(100vw - 170px));
+}
+
+.wiki-script-window .generation-status {
+  margin-top: 34px;
+  margin-bottom: 10px;
+}
+
+.wiki-script-window .loading-image {
+  width: clamp(150px, 18vw, 220px);
+}
+
+.wiki-select-label {
+  color: #667085;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.wiki-select {
+  border: 0;
+  border-radius: 999px;
+  background: #f0f3f7;
+  color: #101828;
+  padding: 10px 14px;
+  font: inherit;
+  font-weight: 800;
+  outline: none;
+}
+
+.wiki-action-button {
+  border: 0;
+  border-radius: 999px;
+  background: #eef2f6;
+  color: #344054;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 12px 18px;
+}
+
+.wiki-action-button:hover {
+  background: #e5eaf0;
+}
+
+.wiki-send-button {
+  display: inline-grid;
+  place-items: center;
+}
+
+.wiki-output {
+  width: min(1180px, calc(100vw - 170px));
+  margin-top: 0;
+  margin-bottom: 22px;
+  border: 1px solid #dfe5ed;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08);
+}
+
+.wiki-output-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #e9edf3;
+  padding: 18px 24px;
+}
+
+.wiki-output-header img {
+  display: none;
+}
+
+.wiki-output-header p {
+  margin: 0;
+  color: #344054;
+  font-weight: 900;
+}
+
+.wiki-output-header small {
+  color: #667085;
+  font-weight: 700;
+}
+
+.wiki-output-body {
+  display: grid;
+  gap: 16px;
+  max-height: 430px;
+  overflow: auto;
+  padding: 24px;
+  white-space: pre-wrap;
+}
+
+.wiki-output-actions {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 24px 22px;
+}
+
+.wiki-clear-button {
+  min-height: 42px;
+  border-radius: 999px;
+  background: #eef2f6;
+  color: #344054;
+  box-shadow: none;
+}
+
+.wiki-clear-button:hover {
+  background: #e5eaf0;
+}
+
+.wiki-script-scene,
+.wiki-answer-block,
+.wiki-memory-used {
+  border-radius: 18px;
+  background: #f8fafc;
+  color: #172033;
+  line-height: 1.65;
+  padding: 18px;
+}
+
+.wiki-memory-used strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.wiki-memory-used p {
+  margin: 8px 0 0;
+  color: #475467;
+}

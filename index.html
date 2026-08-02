@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamatem Wiki</title>
+  </head>
+  <body>
+    <div class="workspace-shell wiki-shell">
+      <aside class="side-menu" aria-label="Main windows">
+        <div class="menu-brand">
+          <img src="/assets/Logo-wiht-BG.png" alt="Tamatem AI" />
+        </div>
+        <nav class="window-tabs" aria-label="Workspace">
+          <button class="window-tab active" type="button" data-window-tab="script" aria-label="Script">
+            <img class="tab-icon" src="/assets/app.png" alt="" aria-hidden="true" />
+            <span class="tab-label">Script</span>
+          </button>
+          <button class="window-tab" type="button" data-window-tab="brain" aria-label="Brain">
+            <img class="tab-icon" src="/assets/Brain.png" alt="" aria-hidden="true" />
+            <span class="tab-label">Brain</span>
+          </button>
+        </nav>
+      </aside>
+
+      <div class="window-frame">
+        <main id="script-window" class="app window-panel wiki-script-window" data-window-panel="script">
+          <section id="hero" class="hero wiki-hero">
+            <img class="app-logo" src="/assets/logo.png" alt="Tamatem Wiki" />
+            <div class="hero-copy">
+              <h1>Tamatem Wiki</h1>
+              <p>Ask the game brain, or write scripts from shared creative memory.</p>
+            </div>
+          </section>
+
+          <section id="generation-status" class="generation-status" aria-live="polite" hidden>
+            <video
+              class="loading-image"
+              src="/assets/workers/writing-script.webm"
+              autoplay
+              loop
+              muted
+              playsinline
+              aria-hidden="true"
+            ></video>
+            <div class="status-heading">
+              <span class="status-spinner" aria-hidden="true"></span>
+              <p id="status-log" class="status-log"></p>
+            </div>
+          </section>
+
+          <section id="wiki-output" class="wiki-output" aria-label="Wiki response" hidden>
+            <header class="wiki-output-header">
+              <img src="/assets/logo.png" alt="" aria-hidden="true" />
+              <div>
+                <p id="wiki-output-title">Wiki answer</p>
+                <small id="wiki-output-meta"></small>
+              </div>
+            </header>
+            <div id="wiki-output-body" class="wiki-output-body"></div>
+            <footer class="wiki-output-actions">
+              <button id="clear-output" class="secondary-button wiki-clear-button" type="button">Cancel</button>
+            </footer>
+          </section>
+
+          <section class="prompt-shell wiki-prompt-shell" aria-label="Wiki prompt">
+            <div class="prompt-composer">
+              <textarea
+                id="wiki-prompt"
+                rows="2"
+                placeholder="Ask for a VIP Baloot script, hook, or creative direction..."
+              ></textarea>
+              <div class="composer-actions">
+                <div class="composer-left">
+                  <label class="wiki-select-label" for="game-select">Game</label>
+                  <select id="game-select" class="wiki-select"></select>
+                </div>
+                <div class="composer-right">
+                  <button id="ask-wiki" class="wiki-action-button secondary-button" type="button">Ask Wiki</button>
+                  <button id="write-script" class="send-button wiki-send-button" type="button" aria-label="Write script">
+                    <img class="send-icon" src="/assets/stars.svg" alt="" aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <p id="error-message" class="error" hidden></p>
+        </main>
+
+        <section id="brain-window" class="brain-window window-panel" data-window-panel="brain" hidden>
+          <div id="brain-canvas" class="brain-canvas">
+            <svg id="brain-edges" class="brain-edges" aria-hidden="true"></svg>
+            <header class="brain-header">
+              <h2>Tamatem Wiki</h2>
+              <p>Shared game knowledge and creative memory</p>
+            </header>
+          </div>
+          <div id="brain-composer" class="brain-composer">
+            <div id="brain-chips" class="brain-chips" hidden></div>
+            <div class="brain-composer-row">
+              <button id="brain-attach" class="brain-attach" type="button" aria-label="Add files">+</button>
+              <textarea id="brain-input" class="brain-input" rows="1" placeholder="Add a memory"></textarea>
+              <button id="brain-send" class="brain-send" type="button" aria-label="Save thought">
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 12.5v-9M4.5 7 8 3.5 11.5 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <p class="brain-footnote">Click a thought to read or edit it &middot; drag anything to rearrange</p>
+            <input id="brain-file-input" type="file" multiple hidden />
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

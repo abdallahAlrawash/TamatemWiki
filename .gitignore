@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.env.*
+
+storage/outputs/
+storage/brain-files/
+storage/memory/
+storage/secrets/
+storage/brain.json
+
+npm-debug.log*
+*.local

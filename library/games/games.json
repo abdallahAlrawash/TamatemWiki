@@ -1,0 +1,44 @@
+[
+  {
+    "id": "VIPBaloot",
+    "code": "BAL",
+    "name": "VIP Baloot",
+    "brief": "Online Baloot + Jackaroo Complex social card game for Saudi and Gulf players. User may mention it as VIP , Baloot , بالوت , BAL, or anything like that",
+    "phoneOrientation": "vertical"
+  },
+  {
+    "id": "WarOfSparta",
+    "code": "WOS",
+    "name": "War Of Sparta",
+    "brief": "",
+    "phoneOrientation": "vertical"
+  },
+  {
+    "id": "LandOfHeros",
+    "code": "LOH",
+    "name": "Land Of Heros",
+    "brief": "",
+    "phoneOrientation": "vertical"
+  },
+  {
+    "id": "FashionQueen",
+    "code": "FQ",
+    "name": "Fashion Queen",
+    "brief": "",
+    "phoneOrientation": "horizontal"
+  },
+  {
+    "id": "ClashOfEmpire",
+    "code": "COE",
+    "name": "Clash Of Empire",
+    "brief": "",
+    "phoneOrientation": "horizontal"
+  },
+  {
+    "id": "Atheria",
+    "code": "ATH",
+    "name": "Atheria",
+    "brief": "",
+    "phoneOrientation": "horizontal"
+  }
+]

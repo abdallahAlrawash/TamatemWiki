@@ -1,0 +1,78 @@
+Write one UGC / influencer short video script for a mobile game AD.
+
+Use the game info and creative direction below.
+
+Important rules:
+- Output JSON only.
+- Write the VO in casual Saudi / Gulf dialect.
+- In the VO, use light Arabic harakat / tashkeel only on words where they matter for pronouncing the Arabic words correctly. Do not fully tashkeel every sentence.
+- The VO may include ElevenLabs v3 emotion / delivery tags like [annoyed], [surprised], [excited], [whispering], or [laughs]... or other tags.
+- Use those VO tags only when they help the performance, and use max 3 tags per VO line.
+- Write description, image, and action in English only.
+- Use the game name and product details from the provided game info / creative direction.
+
+
+- Do not decide or describe how the influencer / character looks.
+- Do not decide or describe the location, environment, set design, lighting, mood, or overall visual feel.
+- Focus only on what the person / character says and what they do.
+- Body movement should be light and simple: talking, pointing, reacting, holding a phone, looking at camera, simple hand gestures.
+- Each scene must be 6 to 8 seconds long.
+- The mobile phone can appear in some scenes, but it does not have to appear in every scene.
+- If a phone appears, the character can only hold it or show it to camera.
+- If a phone appears in a scene, it must already be visible in the first frame of that scene.
+- Do not make the character take out the phone, bring it into frame, reveal it, raise it into view, or tilt it toward the camera during the scene.
+- The phone should stay simply visible and stable from the start of the scene.
+- Do not make the character tap, click, scroll, navigate, play, or interact with the phone screen.
+- Do not make the character point at a specific thing on the phone screen.
+- The character may point at the phone as a whole, but not at exact UI elements, buttons, cards, or screen details.
+- In the image field, mention the mobile phone only generically, like "holding a mobile phone" or "pointing at the mobile phone".
+- Do not describe what is on the mobile phone screen inside the image field.
+- Use the screen field to describe what appears on the phone screen.
+- If the mobile phone is visible and its screen is visible, screen must briefly say what is shown, such as gameplay, leaderboard, cosmetics, store, game map, chat, rewards, tournament page, or another best-fit game screen.
+- If there is no visible mobile phone screen in the scene, screen must be null.
+- Do not use a phone-only scene before scene 3.
+- From scene 3 onward, you may use scenes that show only the phone, or only part of the person holding the phone.
+- Keep image descriptions short and leave creative space for the image generation layer.
+- For every image description, describe the first frame of the scene. Start with the action the character is doing in that first frame.
+- Mention simple framing and camera angle in the image description.
+
+Return this JSON shape:
+{
+  "background_sfx": [
+    "Simple looping background ambience sound.",
+    "Another simple looping background ambience sound."
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "scene_id": "SC1",
+      "description": "Short full scene description.",
+      "image": "First frame image description with action first, framing, and camera angle.",
+      "screen": "What appears on the mobile phone screen, or null if no phone screen is visible.",
+      "vo": "What the star says.",
+      "action": "Very short, simple body language in English.",
+      "duration_seconds": 7
+    }
+  ]
+}
+
+Make exactly 5 scenes total.
+
+Background SFX:
+- Add a top-level background_sfx array with 3 to 4 simple looping ambience sounds.
+- These are quiet background noises that play along the whole video to make the scene setup feel more realistic.
+- They are not moment-based sound effects and they are not tied to specific scene actions.
+- Each sound should be simple and clean enough for ElevenLabs sound effects generation, like room tone, air conditioner hum, garden ambience, distant traffic, soft indoor noise, or similar.
+- Use the provided scene setup direction to choose sounds that fit the place.
+
+Scene setup direction:
+{{SCENE_SETUP_DIRECTION}}
+
+===== USER BRIEF (START) =====
+{{USER_BRIEF}}
+
+If a user brief is provided above, it is the required creative direction for this script: respect it and build the whole script around it. It takes priority over the general angle, flow, and hook options in the relevant knowledge below, including the freshness rules — if the brief asks to reuse or copy a specific concept, follow it. If the user brief is empty, ignore this section and write freely using the relevant knowledge as usual.
+===== USER BRIEF (END) =====
+
+Relevant knowledge:
+{{BRAIN_CONTEXT}}

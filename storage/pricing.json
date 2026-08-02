@@ -1,0 +1,96 @@
+{
+  "currency": "USD",
+  "updated_at": "2026-06-16",
+  "notes": [
+    "Editable estimated pricing table used by the local cost ledger.",
+    "ComfyUI/RunPod is intentionally excluded unless added later.",
+    "OpenAI Batch and Gemini Batch can be represented by setting billing_mode to batch."
+  ],
+  "openai": {
+    "text_models": {
+      "gpt-5.2": {
+        "input_per_1m_tokens": 2.5,
+        "cached_input_per_1m_tokens": 0.25,
+        "output_per_1m_tokens": 15
+      },
+      "gpt-4.1-mini": {
+        "input_per_1m_tokens": 0.4,
+        "cached_input_per_1m_tokens": 0.1,
+        "output_per_1m_tokens": 1.6
+      }
+    },
+    "image_models": {
+      "gpt-image-2": {
+        "text_input_per_1m_tokens": 5,
+        "image_input_per_1m_tokens": 8,
+        "cached_input_per_1m_tokens": 2,
+        "image_output_per_1m_tokens": 30,
+        "fallback_per_image_estimate": 0
+      }
+    },
+    "batch_discount": 0.5
+  },
+  "google": {
+    "image_models": {
+      "gemini-3-pro-image": {
+        "input_text_image_per_1m_tokens": 2,
+        "input_image_estimate": 0.0011,
+        "output_text_per_1m_tokens": 12,
+        "output_image_1k_2k": 0.134,
+        "output_image_4k": 0.24,
+        "batch_input_image_estimate": 0.0006,
+        "batch_output_image_1k_2k": 0.067,
+        "batch_output_image_4k": 0.12
+      },
+      "gemini-3.1-flash-image": {
+        "input_text_image_per_1m_tokens": 0.5,
+        "output_text_per_1m_tokens": 3,
+        "output_image_1k": 0.067,
+        "output_image_2k": 0.101,
+        "output_image_4k": 0.151,
+        "batch_output_image_1k": 0.034,
+        "batch_output_image_2k": 0.05,
+        "batch_output_image_4k": 0.076
+      }
+    },
+    "text_models": {
+      "gemini-2.5-flash": {
+        "input_per_1m_tokens": 0.1,
+        "audio_input_per_1m_tokens": 0.7,
+        "output_per_1m_tokens": 0.4
+      }
+    },
+    "batch_discount": 0.5
+  },
+  "elevenlabs": {
+    "tts": {
+      "eleven_v3": {
+        "per_1000_characters": 0.1
+      },
+      "default": {
+        "per_1000_characters": 0.1
+      }
+    },
+    "speech_to_text": {
+      "scribe_v1": {
+        "per_hour": 0.22
+      },
+      "scribe_v2": {
+        "per_hour": 0.22
+      }
+    },
+    "sound_effects": {
+      "eleven_text_to_sound_v2": {
+        "per_generation": 0.12
+      },
+      "default": {
+        "per_generation": 0.12
+      }
+    }
+  },
+  "local": {
+    "ffmpeg": {
+      "per_operation": 0
+    }
+  }
+}
