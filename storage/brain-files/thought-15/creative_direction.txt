@@ -1,0 +1,103 @@
+# VIP Baloot - UGC Script Creative Direction
+
+Write short-form UGC / influencer ad scripts for VIP Baloot, a mobile Baloot and Jackaroo-style social game for Saudi and Gulf players.
+
+The VO should be in casual Saudi / Gulf dialect. It should feel like a real player talking naturally to friends, not like a polished ad or brand copy.
+
+## Main Goal
+
+Each script should feel fresh. Do not reuse the same opening, same pain point, same wording pattern, or same feature order every time.
+
+Before writing, choose one main creative angle for the script. Build the whole script around that angle instead of trying to mention everything.
+
+## Possible Creative Angles
+
+Choose one angle per script:
+
+- Social session: the game feels like playing with friends in a real gathering.
+- Instant play: the player can jump into a match without waiting for friends.
+- Competitive brag: the player wants to prove skill, win, rank up, and talk a little trash.
+- Boredom escape: the game fills boring moments at home, in the car, while traveling, or while waiting.
+- Noob to pro: beginner players can learn, improve, and eventually compete.
+- Strategy layer: Jackaroo Complex adds teamwork, planning, and smart moves.
+- Community status: rankings, gifts, profiles, chat, and customization make the player feel known.
+- Tournament energy: private tournaments and challenges create stakes and excitement.
+
+## Hook Thinking
+
+The hook must create immediate curiosity or tension in the first seconds.
+
+Do not write a generic intro. Start with a human moment, a problem, a challenge, a boast, a sudden reaction, or a direct question that makes the viewer want to keep watching.
+
+Think of the hook as one of these jobs:
+
+- Make the viewer feel, "That happens to me."
+- Challenge the viewer's skill or pride.
+- Start in the middle of a funny or intense moment.
+- Set up a tiny story that needs an answer.
+- Create curiosity about why the player keeps opening the game.
+
+Do not copy example hooks from the game info or creative notes. Invent a new hook each time.
+
+## Script Flow
+
+The script should still feel clear, but it does not need to follow the same structure every time.
+
+Useful flow options:
+
+- Problem -> game as solution -> feature proof -> CTA.
+- Brag -> explain why the game is addictive -> challenge viewer -> CTA.
+- Mini story -> twist -> game feature -> CTA.
+- Direct challenge -> feature proof -> playful ending.
+- Reaction moment -> explain what happened -> invite viewer to try.
+
+Pick the flow that best fits the chosen creative angle.
+
+## Voice
+
+- Natural, spoken, imperfect, and energetic.
+- Sounds like a Saudi/Gulf player talking to friends.
+- Playful teasing is good, but keep it friendly.
+- Light bragging is good, but do not make it too scripted.
+- Avoid corporate language, formal Arabic, and polished marketing lines.
+- Avoid English words in the VO unless the brand/game term requires it.
+
+## Feature Selection
+
+Pick only 1 to 3 features per script. Do not list everything.
+
+Good feature areas to choose from:
+
+- Real players from Saudi/Gulf.
+- Play with friends or join matches quickly.
+- Voice and text chat.
+- Baloot plus Jackaroo Complex in the same app.
+- Tournaments, challenges, leaderboards, and ranking.
+- Tutorial / learning path for beginners.
+- Gifts, profiles, customization, and social presence.
+- No annoying ads, rewards, and daily/weekly reasons to return.
+
+Choose the features that support the chosen angle. If the angle is competition, focus on ranking, challenges, real opponents. If the angle is social, focus on friends, chat, real people. If the angle is beginner growth, focus on learning and improving.
+
+## Variety Rules
+
+- Do not always start with friends not answering.
+- Do not always make the first scene a phone call.
+- Do not always use the same CTA wording.
+- Do not always mention the same features.
+- Do not make every script about the same emotional truth.
+- Avoid repeating exact lines from previous outputs if they appear in context.
+
+## CTA Thinking
+
+The CTA should feel like the natural ending of the script, not a formal ad command.
+
+It can be:
+
+- A playful challenge.
+- An invitation to join.
+- A direct download push.
+- A funny tease about whether the viewer is skilled or not.
+- A confident closing line that matches the angle.
+
+Keep it short and conversational.

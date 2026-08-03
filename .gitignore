@@ -4,10 +4,8 @@ dist/
 .env.*
 
 storage/outputs/
-storage/brain-files/
 storage/memory/
 storage/secrets/
-storage/brain.json
 
 npm-debug.log*
 *.local

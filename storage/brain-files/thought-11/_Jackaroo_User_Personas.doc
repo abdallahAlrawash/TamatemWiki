@@ -1,0 +1,877 @@
+Date: Sat, 13 Jun 2026 16:12:56 +0000 (UTC)
+Message-ID: <2016890395.161.1781367176089@2a29a045eafc>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_160_1140272555.1781367176089"
+
+------=_Part_160_1140272555.1781367176089
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>=F0=9F=8E=B2 Jackaroo User Personas</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>=F0=9F=8E=B2 Jackaroo User Personas</h1>
+    <div class=3D"Section1">
+        <h1 local-id=3D"e089e369d751" id=3D"id-=F0=9F=8E=B2JackarooUserPers=
+onas-WhyWeBuiltThisPersona">Why We Built This Persona</h1>
+<p local-id=3D"909da77cfa26">Jackaroo and Baloot are both beloved card and =
+board games in the Arab world, but they attract meaningfully different play=
+er profiles. Before we launch Jackaroo as a new game mode inside VIP Baloot=
+, we need to understand who we are really building and marketing this featu=
+re for =E2=80=94 because defaulting to our existing Baloot audience could l=
+ead to misaligned messaging, wasted ad spend, and a missed opportunity to g=
+row our TAM.</p>
+<p local-id=3D"e3ce96e770f5"></p>
+<p local-id=3D"befd28e76510">This document captures the primary persona for=
+ the Jackaroo player, grounded in behavioral research, regional gaming tren=
+ds, and first-party signals from similar casual-strategy games in the MENA =
+market. It is intended as a shared reference for the Marketing team to alig=
+n acquisition channels, creative direction, and in-app communication.</p>
+<p local-id=3D"618ee9c68ae5">&nbsp;</p>
+<h1 local-id=3D"9ca5c313778a" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-The=
+PersonaataGlance">The Persona at a Glance</h1>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"4d=
+4d1b82-36d5-494b-b890-7fbdf37729ec" class=3D"confluenceTable">
+<tbody>
+<tr data-local-id=3D"24e7ef87-a53c-47e2-abea-fd34dfaa0a49">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"61a3c34d-6654-46b4-9=
+503-680212526796" class=3D"confluenceTd">
+<p local-id=3D"7b611abdb726"><strong>Name</strong></p></td>
+<td data-highlight-colour=3D"#ffffff" data-local-id=3D"c923d878-11cd-4e86-a=
+7e6-61522ab8b637" class=3D"confluenceTd">
+<p local-id=3D"82bfb031d9c3">Khalid =E2=80=94 "The Family Game Night King</=
+p></td>
+</tr>
+<tr data-local-id=3D"d38b2a5509a2">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"7b1af8ba-22b6-4457-8=
+3ae-4c886a3a8f65" class=3D"confluenceTd">
+<p local-id=3D"32bd245f2dad"><strong>Age</strong></p></td>
+<td data-highlight-colour=3D"#ffffff" data-local-id=3D"a4e564774fef" class=
+=3D"confluenceTd">
+<p local-id=3D"a4cbc0fc0b74">24 =E2=80=93 38 years old</p></td>
+</tr>
+<tr data-local-id=3D"ba7114bd0a10">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"c7801acc-3fb0-4adb-9=
+61a-3bceb6f842bb" class=3D"confluenceTd">
+<p local-id=3D"341bdfdbfcdf"><strong>Gender</strong></p></td>
+<td data-highlight-colour=3D"#ffffff" data-local-id=3D"5fd7e8ad-1e2f-4a73-a=
+f5c-c5d8fed6547a" class=3D"confluenceTd">
+<p local-id=3D"3c2b55a154f6">Primarily male (65%), meaningful female segmen=
+t (35%) =E2=80=94 especially in family settings</p></td>
+</tr>
+<tr data-local-id=3D"4eb37acd18b2">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"c17659e0-1570-4ef2-9=
+72e-0a070d38bcbd" class=3D"confluenceTd">
+<p local-id=3D"2396da55fabd"><strong>Geography</strong></p></td>
+<td data-highlight-colour=3D"#ffffff" data-local-id=3D"f3025999-9922-42d9-b=
+7dc-ad0ef730a26b" class=3D"confluenceTd">
+<p local-id=3D"7d499022d457">Saudi Arabia, Kuwait, UAE, Jordan, Egypt (dias=
+pora)</p></td>
+</tr>
+<tr data-local-id=3D"5aa7d6047ae4">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"5da8f351-a93d-4bf9-a=
+a4f-faae73c6573f" class=3D"confluenceTd">
+<p local-id=3D"f3bb3e9118af"><strong>Device</strong></p></td>
+<td data-highlight-colour=3D"#ffffff" data-local-id=3D"ccf53d8e-947a-4fbc-a=
+da3-c1c68a5aed4a" class=3D"confluenceTd">
+<p local-id=3D"8cef3af21442">Android-first (70%), iOS secondary (30%). Mid-=
+range to flagship smartphones.</p></td>
+</tr>
+<tr data-local-id=3D"e127fe861be6">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"baa23c4f-5c95-4c13-8=
+661-141e7ba232e3" class=3D"confluenceTd">
+<p local-id=3D"8d808d7f9554"><strong>Session Length</strong></p></td>
+<td data-highlight-colour=3D"#ffffff" data-local-id=3D"0ed97937-1a89-48e1-b=
+743-bc390a1d5867" class=3D"confluenceTd">
+<p local-id=3D"b42f3ad74a8d">25=E2=80=9345 minutes per session (longer than=
+ Baloot's typical 15=E2=80=9320 min)</p></td>
+</tr>
+<tr data-local-id=3D"4d64d290fdb5">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"6482f59e-7cd9-4570-b=
+0ca-091e5d46f4c1" class=3D"confluenceTd">
+<p local-id=3D"96e53ce6502c"><strong>Play Context</strong></p></td>
+<td data-highlight-colour=3D"#ffffff" data-local-id=3D"7c62f3b304c0" class=
+=3D"confluenceTd">
+<p local-id=3D"581ace987dce">Family gatherings, evenings at home, social ha=
+ngouts =E2=80=94 not commutes</p></td>
+</tr>
+<tr data-local-id=3D"48df01955bae">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"1e9f5002-028c-481c-b=
+bb2-49c5ddb6743f" class=3D"confluenceTd">
+<p local-id=3D"6238ba5e4cd2"><strong>Monetization</strong></p></td>
+<td data-highlight-colour=3D"#ffffff" data-local-id=3D"e3ed3e59-6b00-4c18-a=
+bd6-84d6a127b315" class=3D"confluenceTd">
+<p local-id=3D"e006f4a2fe64">Mid-tier spender. Willing to pay for cosmetics=
+, boards, and tokens =E2=80=94 not P2W mechanics</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 local-id=3D"b75417ba3af0" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-Dee=
+pProfile:WhoIsKhalid?">Deep Profile: Who Is Khalid?</h1>
+<h2 local-id=3D"b2cbc2c286e6" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-Bac=
+kground&amp;LifeStage">Background &amp; Life Stage</h2>
+<p local-id=3D"b80cedad0ebd">Khalid is in his late 20s or early 30s. He has=
+ a full-time job =E2=80=94 probably in a corporate, government, or trades r=
+ole =E2=80=94 and his social life revolves around family and a tight circle=
+ of friends. He grew up playing Jackaroo on a physical board at his grandmo=
+ther's house, and the game carries genuine nostalgia and emotional weight f=
+or him.</p>
+<p local-id=3D"9127fff723ed">He is digitally fluent and spends meaningful t=
+ime on social platforms (TikTok, Instagram, Snapchat), but he is not a "har=
+dcore gamer." He does not follow esports, does not own a console primarily =
+for competitive gaming, and his mobile game usage is driven by social and e=
+motional motivation =E2=80=94 not skill progression.</p>
+<p local-id=3D"b23f87c9e50a">&nbsp;</p>
+<h2 local-id=3D"ab21aeb3c226" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-Gam=
+ingBehavior">Gaming Behavior</h2>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"03=
+3e4b1b-fdae-4816-aeb8-8d1a1deda6c6" class=3D"confluenceTable">
+<tbody>
+<tr data-local-id=3D"688cb0ce-0569-4257-8073-70135f3ed03f">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"e2b9e87e-0814-4d40-a=
+008-ec0e53674c6b" class=3D"confluenceTd">
+<p local-id=3D"6df4573efc45"><strong>Gaming frequency</strong></p></td>
+<td data-local-id=3D"181409d2-bfaa-4e64-87e8-74c433032240" class=3D"conflue=
+nceTd">
+<p local-id=3D"9a9844229f69">3=E2=80=935 sessions per week</p></td>
+</tr>
+<tr data-local-id=3D"896d6fa8-80a0-48e8-b642-874ee4d17ef0">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"f6e5eefa-4d93-43fd-8=
+301-acf7486be064" class=3D"confluenceTd">
+<p local-id=3D"38e51e35501e"><strong>Preferred time</strong></p></td>
+<td data-local-id=3D"71ea0a61-d5c5-4002-8056-e19015855432" class=3D"conflue=
+nceTd">
+<p local-id=3D"aae9b6d58045">Evening (after 9 PM), weekends</p></td>
+</tr>
+<tr data-local-id=3D"36f99f21-272c-465b-be23-84c6332aa6aa">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"b1c8c30c-1ab3-4e5d-9=
+ca9-643dee8ca12f" class=3D"confluenceTd">
+<p local-id=3D"67bfad94e942"><strong>Game genres</strong></p></td>
+<td data-local-id=3D"53c742ed-53a4-44dc-807d-700df0f0f6d7" class=3D"conflue=
+nceTd">
+<p local-id=3D"a236695c3d6b">Board games, card games, casual strategy, part=
+y games</p></td>
+</tr>
+<tr data-local-id=3D"9bbdb4e4-fc40-4ada-803d-0ee73582bde0">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"eea63fd0-eb14-4b32-b=
+413-51edc53518b2" class=3D"confluenceTd">
+<p local-id=3D"206532d9b0f7"><strong>Also plays</strong></p></td>
+<td data-local-id=3D"f0140de0-8115-4406-8e3c-1b5d73d1dad2" class=3D"conflue=
+nceTd">
+<p local-id=3D"97662333dc3d">Ludo Star, Garena Speed Drifters, Word games</=
+p></td>
+</tr>
+<tr data-local-id=3D"6cea6b4d-3222-4300-8942-826a6573f4e3">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"b96103f0-6ba2-4dea-a=
+0b1-cd136871b208" class=3D"confluenceTd">
+<p local-id=3D"04eb72cc1ec9"><strong>Pain point</strong></p></td>
+<td data-local-id=3D"9401ad8e-b9bc-476c-9227-f44bb522c837" class=3D"conflue=
+nceTd">
+<p local-id=3D"fabc9d3a3c45">Wants to play with specific friends/family, no=
+t random strangers</p></td>
+</tr>
+<tr data-local-id=3D"1005b22c-c116-4466-aa62-0f70a649a818">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"49f8777d-9584-4354-8=
+535-3ceec1e2c33a" class=3D"confluenceTd">
+<p local-id=3D"63d9000fcee7"><strong>Churn trigger</strong></p></td>
+<td data-local-id=3D"c8a82262-81e4-4f77-90ff-9252b29b72c4" class=3D"conflue=
+nceTd">
+<p local-id=3D"827b16ca8b9c">Long wait times, toxic random players, pay-to-=
+win mechanics</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p local-id=3D"4514c7a0a2a7">&nbsp;</p>
+<h2 local-id=3D"53d350f8ce9f" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-Mot=
+ivationsforPlayingJackaroo(vs.Baloot)">Motivations for Playing Jackaroo (vs=
+. Baloot)</h2>
+<p local-id=3D"6e92c981702d">Understanding the motivational difference is c=
+ritical for messaging. Jackaroo is not a substitute for Baloot =E2=80=94 it=
+ fills a different psychological role:</p>
+<p local-id=3D"057a22e0e8af">&nbsp;</p>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"2c=
+a5b404-7490-43db-8b01-eedbe3a44d10" class=3D"confluenceTable">
+<tbody>
+<tr data-local-id=3D"410110a0-eaee-48b0-a41d-f4395eeed720">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"1f773574-eeee-468b-8=
+5de-00e91ab03b48" class=3D"confluenceTd">
+<p local-id=3D"21c8369e946a"><strong>Social bonding</strong></p></td>
+<td data-local-id=3D"3dcba40b-2a07-4061-84bc-9d32a3b9b3de" class=3D"conflue=
+nceTd">
+<p local-id=3D"b3e15da587aa">Jackaroo is a 4-player cooperative-competitive=
+ game. Khalid wants to play WITH his cousin or wife, not against a stranger=
+.</p></td>
+</tr>
+<tr data-local-id=3D"315595bf-51fe-4686-9a30-e118b9c75d5e">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"41323f0d-f15b-4bcb-b=
+fdf-5375ec238bc4" class=3D"confluenceTd">
+<p local-id=3D"459056fe0937"><strong>Nostalgia &amp; identity</strong></p><=
+/td>
+<td data-local-id=3D"2d5088d9-46ad-4535-a609-83b5eee25eb3" class=3D"conflue=
+nceTd">
+<p local-id=3D"4352ce5ad1a8">The physical board version is a cultural artif=
+act. A digital Jackaroo signals cultural pride =E2=80=94 "a game that is ou=
+rs."</p></td>
+</tr>
+<tr data-local-id=3D"180755fc-9c88-40a6-a2cd-075dcca41c4d">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"39586892-f75c-4259-b=
+0b5-80925fb68067" class=3D"confluenceTd">
+<p local-id=3D"b5ddde42537b"><strong>Casual competition</strong></p></td>
+<td data-local-id=3D"8e7ddc72-dfc5-4397-b3e7-e7ad58731383" class=3D"conflue=
+nceTd">
+<p local-id=3D"83171f076fdf">Khalid wants to win, but stakes are social (br=
+agging rights), not financial.</p></td>
+</tr>
+<tr data-local-id=3D"7cc2d634-6db6-4f4a-9790-0d0f5da0b445">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"8d28c3a3-c3eb-485f-9=
+c00-5bb404690ad9" class=3D"confluenceTd">
+<p local-id=3D"52a4eb487fc1"><strong>Low cognitive overhead</strong></p></t=
+d>
+<td data-local-id=3D"bb6efee1-f834-4e77-aa5b-2048204a4f43" class=3D"conflue=
+nceTd">
+<p local-id=3D"5485fc6b0086">Jackaroo is simpler to learn than Baloot. Khal=
+id can onboard a new family member mid-session.</p></td>
+</tr>
+<tr data-local-id=3D"5733033d-1a18-4300-82c6-25c17a153823">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"488dd06d-a986-4805-8=
+9cd-ec117d035656" class=3D"confluenceTd">
+<p local-id=3D"591a75bef3a8"><strong>Entertainment for groups</strong></p><=
+/td>
+<td data-local-id=3D"808c7ea3-6cf9-4ae2-ae9b-8c326bce7b4d" class=3D"conflue=
+nceTd">
+<p local-id=3D"662af5db2547">Khalid is often the one who "hosts" the game o=
+n his phone for a group watching on one screen.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p local-id=3D"3021441f8ecd">&nbsp;</p>
+<h2 local-id=3D"5b8f1ec2f9ae" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-Psy=
+chographicProfile">Psychographic Profile</h2>
+<p local-id=3D"f053714fcfb2">&nbsp;</p>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"b9=
+87a6ef-8ba7-4ba7-adda-f88af2679895" class=3D"confluenceTable">
+<tbody>
+<tr data-local-id=3D"8801b6c1-ac2d-40d8-893b-2eeda31072e3">
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"358c22d9-d562-4deb-b=
+f99-0626459e4804" class=3D"confluenceTd">
+<p local-id=3D"ae2b467e7bfe"><strong>Core Values</strong></p>
+<p local-id=3D"0d3572ed5f18">&nbsp;</p>
+<ul local-id=3D"516c3bf0740f">
+<li local-id=3D"5539918c9304">
+<p local-id=3D"1cab2d356f5f">Family and community first =E2=80=94 games are=
+ a vehicle for togetherness, not individual achievement</p></li>
+</ul>
+<ul local-id=3D"dfc275b5ed60">
+<li local-id=3D"13985d19a5e0">
+<p local-id=3D"947297421ac5">Cultural authenticity =E2=80=94 prefers games =
+that feel "local" over foreign imports</p></li>
+</ul>
+<ul local-id=3D"bfccc7439479">
+<li local-id=3D"75274e90bdf7">
+<p local-id=3D"089349b4dfe4">Fairness =E2=80=94 deeply dislikes mechanics t=
+hat feel rigged or pay-to-win</p></li>
+</ul>
+<ul local-id=3D"6f6305afaf77">
+<li local-id=3D"efa2417197ac">
+<p local-id=3D"c7f4ec157eec">Fun over prestige =E2=80=94 does not care abou=
+t leaderboard rank, only about the moment</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"d1=
+e7b830-5241-403f-a0b0-73bcbe72792c" class=3D"confluenceTable">
+<tbody>
+<tr data-local-id=3D"16860463-0563-4da5-9bfb-7f58598dd142">
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"dac09a37-26b5-4861-b=
+3a9-293a6d39a1b5" class=3D"confluenceTd">
+<p local-id=3D"8acae163b06c"><strong>Emotional Drivers</strong></p>
+<p local-id=3D"905f979a247d">&nbsp;</p>
+<ul local-id=3D"a00fb8a4d324">
+<li local-id=3D"ee5e314e02c6">
+<p local-id=3D"da5fb04542e2">Nostalgia: recreating physical board game memo=
+ries from childhood</p></li>
+</ul>
+<ul local-id=3D"fb1678974ade">
+<li local-id=3D"ca8e5dcecaee">
+<p local-id=3D"856d7bc48069">Status within the group ("I set up the game fo=
+r everyone")</p></li>
+</ul>
+<ul local-id=3D"0839c2cf0843">
+<li local-id=3D"ce0784f25c0f">
+<p local-id=3D"dd08a2ca7b4e">Lighthearted rivalry with a specific sibling o=
+r friend</p></li>
+</ul>
+<ul local-id=3D"ad13cf4d2fe7">
+<li local-id=3D"196f26783460">
+<p local-id=3D"321797bae727">Escaping daily work stress through familiar, l=
+ow-stakes play</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p local-id=3D"0082d90e6797">&nbsp;</p>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"80=
+c73711-4f0f-43e2-9ea6-1ea320eb1602" class=3D"confluenceTable">
+<tbody>
+<tr data-local-id=3D"09b788da-3450-40eb-8295-c0cb20f27402">
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"e2880ee9-8c87-4cd4-8=
+372-7bdd4bc27f66" class=3D"confluenceTd">
+<p local-id=3D"f7ba0f0f7171"><strong>Frustrations &amp; Barriers</strong></=
+p>
+<p local-id=3D"1be7651c4ac9">&nbsp;</p>
+<ul local-id=3D"7394f1755049">
+<li local-id=3D"37e9753be75c">
+<p local-id=3D"5a9244a7f477">Random matchmaking that breaks the social expe=
+rience</p></li>
+</ul>
+<ul local-id=3D"a513b5508c1c">
+<li local-id=3D"6c033d067823">
+<p local-id=3D"397fe56ffd7e">Overly complex UI that confuses non-tech-savvy=
+ family members</p></li>
+</ul>
+<ul local-id=3D"38757c4233a9">
+<li local-id=3D"24f1add11afa">
+<p local-id=3D"395f874c0bb9">Aggressive monetization (pop-up ads mid-game, =
+forced purchases)</p></li>
+</ul>
+<ul local-id=3D"1252ebac5fdf">
+<li local-id=3D"8838c52e6b84">
+<p local-id=3D"9f3786bc6fa1">Inability to play with 3 other real friends ea=
+sily =E2=80=94 lobby friction</p></li>
+</ul>
+<ul local-id=3D"7b339323da63">
+<li local-id=3D"e2485f47abff">
+<p local-id=3D"2ed84ecc0410">Game modes that feel too different from the ph=
+ysical version they know</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p local-id=3D"d9fb697d1af2">&nbsp;</p>
+<h1 local-id=3D"266cb89d889d" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-Jac=
+karooPlayervs.BalootPlayer:KeyDifferences">Jackaroo Player vs. Baloot Playe=
+r: Key Differences</h1>
+<p local-id=3D"0329305fe06c">This comparison is the core justification for =
+treating Jackaroo as a distinct acquisition segment. Marketing Jackaroo to =
+Baloot players using Baloot messaging will underperform.</p>
+<p local-id=3D"387c21b2147d">&nbsp;</p>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"cd=
+1aafd5-fff3-4095-b5cf-39cfe761a76b" class=3D"confluenceTable">
+<tbody>
+<tr data-local-id=3D"bfa69f45-d010-4967-91de-8c1ef17ee2b6">
+<td data-highlight-colour=3D"#fff0b3" data-local-id=3D"537e6703-a62d-4952-8=
+4d0-6461af778101" class=3D"confluenceTd">
+<p local-id=3D"2a33bafca965"><strong>Baloot Player</strong></p></td>
+<td data-highlight-colour=3D"#f9a825" data-local-id=3D"ebe7ae3c-3dcb-4fc3-a=
+939-bb20c5260cba" class=3D"confluenceTd">
+<p local-id=3D"9ad14a179fb1"><strong>Attribute</strong></p></td>
+<td data-highlight-colour=3D"#fff0b3" data-local-id=3D"ccddff1b-c3de-4931-8=
+6dc-cd060c7ab7d9" class=3D"confluenceTd">
+<p local-id=3D"775c916b3e4a"><strong>Jackaroo Player</strong></p></td>
+</tr>
+<tr data-local-id=3D"0a6710bc-3c22-4b71-a658-ed7ad5e7e60d">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"d5f86af5-3170-4b1a-a=
+fac-adab5d7af4db" class=3D"confluenceTd">
+<p local-id=3D"f5416d83fdba">Male-skewed (75%+)</p></td>
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"2949ed2f-53a8-42a6-a=
+f0b-e282e515f3aa" class=3D"confluenceTd">
+<p local-id=3D"6817666e7db4"><strong>Gender Split</strong></p></td>
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"10710e5a-f7da-4eec-a=
+699-d0601eacfaaf" class=3D"confluenceTd">
+<p local-id=3D"c5496547e754">More balanced (65% male / 35% female)</p></td>
+</tr>
+<tr data-local-id=3D"294605e4-e12b-41e9-94ef-6a244f9ca707">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"69562c8a-4ef0-4172-8=
+a7e-3f378904d8fd" class=3D"confluenceTd">
+<p local-id=3D"8bc823226351">Card strategy, individual skill</p></td>
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"0ad054aa-f0e6-4375-b=
+ead-fb47bc210a0a" class=3D"confluenceTd">
+<p local-id=3D"f0948d139f96"><strong>Game Type</strong></p></td>
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"a9f5b965-9105-4bf5-b=
+ff0-f931130460a2" class=3D"confluenceTd">
+<p local-id=3D"3064d82d201c">Board + team cooperation + luck</p></td>
+</tr>
+<tr data-local-id=3D"f8f15882-4978-43f9-bece-e84760ab46a6">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"2c457d71-73bb-438d-b=
+fff-5adf06ac0914" class=3D"confluenceTd">
+<p local-id=3D"0f18a5a39a0f">Competitive rank-seeker</p></td>
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"c56913c4-8cd9-4a30-a=
+e9d-89c2101cf41c" class=3D"confluenceTd">
+<p local-id=3D"847388358b0b"><strong>Core Motivation</strong></p></td>
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"7281ef75-57a6-495d-a=
+f43-7de8913bf77a" class=3D"confluenceTd">
+<p local-id=3D"7e49a4cc7215">Social bonding, nostalgia</p></td>
+</tr>
+<tr data-local-id=3D"55837a3b-a47d-4f03-a3c5-63d8da1ddb58">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"36dd37ec-541d-41ea-9=
+32f-a7b402f7c911" class=3D"confluenceTd">
+<p local-id=3D"afbbf4558d2b">Plays solo or with strangers OK</p></td>
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"e1b4287a-b576-46fc-8=
+fa3-11ef543d5be3" class=3D"confluenceTd">
+<p local-id=3D"ef1045519889"><strong>Social Context</strong></p></td>
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"e643bbae-730c-40a1-b=
+169-a6b052a78213" class=3D"confluenceTd">
+<p local-id=3D"2df8b52e3910">Strongly prefers known players</p></td>
+</tr>
+<tr data-local-id=3D"f65cb6f6-be05-4265-8699-7a096d6c00c8">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"90a28997-d117-4632-9=
+35d-82747ee7e1c6" class=3D"confluenceTd">
+<p local-id=3D"1d1a8d9e6e7e">Shorter, focused sessions</p></td>
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"cf3a7351-60cf-4a5e-b=
+068-b359fff14556" class=3D"confluenceTd">
+<p local-id=3D"6b40241367c4"><strong>Session Behavior</strong></p></td>
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"56e22214-dbd6-47c0-9=
+0f6-25671bc77298" class=3D"confluenceTd">
+<p local-id=3D"26141ef30ee5">Longer, group-paced sessions</p></td>
+</tr>
+<tr data-local-id=3D"0893b9d9-e9c7-4e1c-841a-28e4409ab518">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"9146a43c-64bd-4e73-a=
+127-7f95e2934fe6" class=3D"confluenceTd">
+<p local-id=3D"e69f610e25a0">Willing to invest in rank/XP systems</p></td>
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"6c793ef9-c061-4d22-b=
+a98-e14d2ddeccd7" class=3D"confluenceTd">
+<p local-id=3D"06685a0f86d4"><strong>Monetization</strong></p></td>
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"1eb2cb0a-8a64-45c3-a=
+fc3-4aeecfbb0f3f" class=3D"confluenceTd">
+<p local-id=3D"7c393f8ed4c7">Spends on cosmetics, themes, board skins</p></=
+td>
+</tr>
+<tr data-local-id=3D"77892a6e-6b9f-46bf-8801-d4a8a2b7516d">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"b1689446-b2fd-401a-9=
+90d-cdf0f72e359f" class=3D"confluenceTd">
+<p local-id=3D"be3efb9db4ff">Twitter/X, gaming communities</p></td>
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"26428a8a-c583-4a89-b=
+079-447976d2ae1a" class=3D"confluenceTd">
+<p local-id=3D"514d4dd7d2d2"><strong>Social Channels</strong></p></td>
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"202f2846-f167-4a9c-a=
+3cb-6e1ccd2abdaa" class=3D"confluenceTd">
+<p local-id=3D"7ab27249707c">Snapchat, TikTok, family WhatsApp groups</p></=
+td>
+</tr>
+<tr data-local-id=3D"0731e38f-5dc2-43e9-a1b9-0416ec6ff93a">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"245edbe6-852c-430b-a=
+e4c-fb5de1bbc4e6" class=3D"confluenceTd">
+<p local-id=3D"dbf3b670b297">Competitive gameplay clips</p></td>
+<td data-highlight-colour=3D"#fff8e1" data-local-id=3D"5d4742a6-a13a-471a-8=
+8e2-d4ee18f69924" class=3D"confluenceTd">
+<p local-id=3D"d43225338bb7"><strong>Content that Resonates</strong></p></t=
+d>
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"67c198af-b2f4-479e-a=
+b7d-b9aaaef40b7f" class=3D"confluenceTd">
+<p local-id=3D"61eab631befd">Nostalgia, family moments, cultural pride</p><=
+/td>
+</tr>
+</tbody>
+</table>
+</div>
+<p local-id=3D"7c0d79ff9a37">&nbsp;</p>
+<h1 local-id=3D"d9e207330047" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-Mar=
+ketingImplications">Marketing Implications</h1>
+<h2 local-id=3D"88e7b734bf53" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-Acq=
+uisitionChannels(RecommendedPriority)">Acquisition Channels (Recommended Pr=
+iority)</h2>
+<p local-id=3D"d7f375b55bfd">&nbsp;</p>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"7a=
+a7cc9c-d4fc-406b-99e1-388fd131878d" class=3D"confluenceTable">
+<tbody>
+<tr data-local-id=3D"231aa998-7318-4d5f-b656-8e575b51ed8d">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"8b41c566-3345-4c27-a=
+af1-5a9ac7cb79d4" class=3D"confluenceTd">
+<ol start=3D"1" local-id=3D"2db3fa418f95">
+<li local-id=3D"90bd0d64a287">
+<p local-id=3D"7feaa3378bb7"><strong>TikTok (Ads + Organic)</strong></p></l=
+i>
+</ol></td>
+<td data-local-id=3D"5ca78d8e-b0c3-4488-80b1-472d056e1671" class=3D"conflue=
+nceTd">
+<p local-id=3D"08efcb7ad23b">Short clips showing 4 friends reacting to a Ja=
+ckaroo move. Target 22=E2=80=9338, Saudi + Gulf. Lookalike from Ludo Star a=
+udience.</p></td>
+</tr>
+<tr data-local-id=3D"02fc01b4-6e83-4346-b7d3-a74433108694">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"d23888e9-92e4-4765-8=
+249-e95a1c375ae7" class=3D"confluenceTd">
+<ol start=3D"2" local-id=3D"83154a9e616c">
+<li local-id=3D"929618251b54">
+<p local-id=3D"1a9c145250c3"><strong>Snapchat Ads</strong></p></li>
+</ol></td>
+<td data-local-id=3D"08d125e8-6379-4bbc-843d-abc6d336bb62" class=3D"conflue=
+nceTd">
+<p local-id=3D"33dd77fd139b">Strong family/friend group targeting in KSA an=
+d Kuwait. Use "gather your crew" creative angle.</p></td>
+</tr>
+<tr data-local-id=3D"832583f6-970d-4efc-a987-8d3620760ff5">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"d58d78df-9a50-4200-a=
+034-a64aac45a8bf" class=3D"confluenceTd">
+<ol start=3D"3" local-id=3D"e34ce727f052">
+<li local-id=3D"fca15c309a50">
+<p local-id=3D"1cc49a7dc5fb"><strong>Instagram Reels</strong></p></li>
+</ol></td>
+<td data-local-id=3D"01d763b2-23de-4ea6-be72-b2eb570e212a" class=3D"conflue=
+nceTd">
+<p local-id=3D"da1aa89b24f7">Nostalgia angle: "Remember playing this as a k=
+id?" UGC-style content performs well.</p></td>
+</tr>
+<tr data-local-id=3D"4a3232fe-e02d-4fc4-9dab-abe93f3e193b">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"6262af6e-7394-43f1-9=
+8df-7c74f3ed1224" class=3D"confluenceTd">
+<ol start=3D"4" local-id=3D"686f4e80511f">
+<li local-id=3D"c619bc292675">
+<p local-id=3D"7c577c7f06c5"><strong>WhatsApp Referral (in-app)</strong></p=
+></li>
+</ol></td>
+<td data-local-id=3D"8d34d513-4a21-46eb-afe3-bc91d6c7f27a" class=3D"conflue=
+nceTd">
+<p local-id=3D"4d2a3cf56158">Add a one-tap "Invite Friends to Jackaroo" tha=
+t generates a WhatsApp deep-link. This is how Khalid actually recruits play=
+ers.</p></td>
+</tr>
+<tr data-local-id=3D"5edbeac4-8baf-4765-a394-90a105cec293">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"60c39e23-94fd-4af9-a=
+bda-bd746392afad" class=3D"confluenceTd">
+<ol start=3D"5" local-id=3D"6b707c54b78b">
+<li local-id=3D"44f73665dd1b">
+<p local-id=3D"6f8ab72eece2"><strong>Influencer (Micro &gt; Macro)</strong>=
+</p></li>
+</ol></td>
+<td data-local-id=3D"f5e1a998-9181-409b-82d1-272a21aec78a" class=3D"conflue=
+nceTd">
+<p local-id=3D"3827db06a65b">Family-oriented micro-influencers (50K=E2=80=
+=93300K) in Saudi, Kuwait. Authenticity matters more than reach.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p local-id=3D"cf032ede2e5e">&nbsp;</p>
+<h2 local-id=3D"a5b7a0d88aa5" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-Cre=
+ativeDirection">Creative Direction</h2>
+<ul local-id=3D"807c4e5c913d">
+<li local-id=3D"1294ab5ce1d8">
+<p local-id=3D"46683f8e9084">Lead with family and friendship moments, not s=
+olo player wins.</p></li>
+</ul>
+<ul local-id=3D"5e6f5ce6d9a6">
+<li local-id=3D"8ac9b8982a35">
+<p local-id=3D"531e6c161213">Show the board clearly =E2=80=94 trigger visua=
+l nostalgia from the physical game.</p></li>
+</ul>
+<ul local-id=3D"105f97ab0b46">
+<li local-id=3D"5bc202861f19">
+<p local-id=3D"3841575b8fbf">Use Gulf Arabic dialect in copy (not MSA) =E2=
+=80=94 especially for Saudi/Kuwaiti primary market.</p></li>
+</ul>
+<ul local-id=3D"f70f726abf15">
+<li local-id=3D"b83e072edbfb">
+<p local-id=3D"f8b235f37661">Avoid hardcore gamer aesthetic. Warmth, humor,=
+ and familiarity beat hype.</p></li>
+</ul>
+<ul local-id=3D"b97f1d2c135e">
+<li local-id=3D"4789a65c2e8b">
+<p local-id=3D"9c49e157a1b0">Highlight "play with friends easily" as a key =
+UX differentiator.</p></li>
+</ul>
+<p local-id=3D"d796d5fc24f9">&nbsp;</p>
+<h2 local-id=3D"fef780f06ef5" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-In-=
+AppMessagingPriorities">In-App Messaging Priorities</h2>
+<ul local-id=3D"d571ba69add9">
+<li local-id=3D"150b2229c470">
+<p local-id=3D"023b4dff2155">Onboarding: Emphasize private room creation an=
+d friend invites =E2=80=94 not random matchmaking first.</p></li>
+</ul>
+<ul local-id=3D"580b2391e096">
+<li local-id=3D"aa0e6e1bb830">
+<p local-id=3D"78d801aea128">Monetization: Lead with board skins, marble se=
+ts, themed tables (cultural/seasonal). Avoid energy mechanics.</p></li>
+</ul>
+<ul local-id=3D"790d50837baf">
+<li local-id=3D"feb92233ea9b">
+<p local-id=3D"11d4891382c3">Retention: Weekly "Family Challenge" events. S=
+easonal themes (Ramadan, Eid, National Day).</p></li>
+</ul>
+<ul local-id=3D"9a642582357e">
+<li local-id=3D"d126c78d8f45">
+<p local-id=3D"8d76c0ab07f0">Notification copy: Social triggers ("Your cous=
+in Faisal is waiting in the room") outperform generic prompts.</p></li>
+</ul>
+<p local-id=3D"8b9ea511a7d3">&nbsp;</p>
+<h1 local-id=3D"00b62189f812" id=3D"id-=F0=9F=8E=B2JackarooUserPersonas-Job=
+stoBeDone(JTBD)">Jobs to Be Done (JTBD)</h1>
+<p local-id=3D"b83d326e323e">When I am spending an evening with family or f=
+riends and we want to play something together on one phone or our own phone=
+s, I want to play Jackaroo digitally so I can recreate the fun of our old b=
+oard game without needing the physical set, waiting for a full table, or de=
+aling with strangers.</p>
+<p local-id=3D"4f321b58212e">&nbsp;</p>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"8b=
+412ff5-2cb8-4af9-81c4-75f5c19e6c47" class=3D"confluenceTable">
+<tbody>
+<tr data-local-id=3D"5cc01c27-6aca-4d43-8f1d-b41208e3cb5c">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"7689cb88-09c5-4213-a=
+9b6-6c07d64f027c" class=3D"confluenceTd">
+<p local-id=3D"8a5199fa51af"><strong>Functional Job</strong></p></td>
+<td data-local-id=3D"38ce238b-b00f-4ab1-99c4-ce891974d165" class=3D"conflue=
+nceTd">
+<p local-id=3D"9d53e5fff3a0">Launch a private Jackaroo room, invite 3 known=
+ friends, and complete a game quickly with minimal friction.</p></td>
+</tr>
+<tr data-local-id=3D"2503ad7d-01dd-465b-aa33-8acc6fbfc36e">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"622c9b46-f4b2-4537-a=
+c4e-a48fd79c946f" class=3D"confluenceTd">
+<p local-id=3D"056fb732090b"><strong>Emotional Job</strong></p></td>
+<td data-local-id=3D"b175d062-0b3f-46c9-a5e2-3588a0f27fc7" class=3D"conflue=
+nceTd">
+<p local-id=3D"e774dd28b200">Feel the warmth and laughter of a physical gam=
+e night, even if we are in different cities.</p></td>
+</tr>
+<tr data-local-id=3D"bb3e9a2b-4564-4df9-946f-54da9bb42ac1">
+<td data-highlight-colour=3D"#ede7f6" data-local-id=3D"7aa0661d-7a1b-49af-9=
+e34-d3d64e5fef73" class=3D"confluenceTd">
+<p local-id=3D"7dc42a605553"><strong>Social Job</strong></p></td>
+<td data-local-id=3D"07d4744a-1693-4eb9-bbb0-345c7125530f" class=3D"conflue=
+nceTd">
+<p local-id=3D"bfec5e0b4706">Be the person in the group who facilitates fun=
+ =E2=80=94 "the one who set up the game."</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p local-id=3D"9aa1b50a9ed2">&nbsp;</p>
+<p local-id=3D"af1c95a4066e">&nbsp;</p>
+    </div>
+</body>
+</html>
+------=_Part_160_1140272555.1781367176089--
