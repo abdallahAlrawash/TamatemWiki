@@ -1,0 +1,37 @@
+{
+  "_note": "Shortcut table from docs/script-writer-integration.md, keyed by the wiki's own game id. 'catalogGame' is the canonical value from GET /api/search/options -- the ONLY strings the finder resolves. Sending anything else gets the game filter silently DROPPED and returns whole-catalog results (96% WAR OF SPARTA), so games with inCatalog:false must not be sent as a filter at all. Membership is re-checked against /api/search/options at runtime; this file is the mapping, not the authority.",
+  "games": {
+    "VIPBaloot": {
+      "alias": "bal",
+      "catalogGame": "VIP Baloot",
+      "inCatalog": true
+    },
+    "WarOfSparta": {
+      "alias": "wos",
+      "catalogGame": "WAR OF SPARTA",
+      "inCatalog": true
+    },
+    "LandOfHeros": {
+      "alias": "loh",
+      "catalogGame": "LAND OF HEROES",
+      "inCatalog": true,
+      "_note": "Registered and filterable, but 0 indexed assets -- beats correctly return nothing."
+    },
+    "FashionQueen": {
+      "alias": "fq",
+      "catalogGame": "Fashion Queen",
+      "inCatalog": false
+    },
+    "ClashOfEmpire": {
+      "alias": "coe",
+      "catalogGame": "Castle of Empire",
+      "inCatalog": false,
+      "_note": "The wiki calls this 'Clash Of Empire'; the doc's alias table calls it 'Castle of Empire'. Neither is in the catalog."
+    },
+    "Atheria": {
+      "alias": "ath",
+      "catalogGame": "Atheria",
+      "inCatalog": false
+    }
+  }
+}

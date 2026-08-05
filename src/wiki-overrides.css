@@ -162,3 +162,482 @@
   margin: 8px 0 0;
   color: #475467;
 }
+
+.prompt-window {
+  position: relative;
+  height: calc(100vh - 48px);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.prompt-canvas {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 34px 40px 132px;
+  background-color: #fbfbfc;
+}
+
+.prompt-header {
+  text-align: center;
+}
+
+.prompt-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.32rem;
+  font-weight: 700;
+}
+
+.prompt-header p {
+  margin: 2px 0 0;
+  color: #9ca3af;
+  font-size: 1.02rem;
+}
+
+.prompt-editor {
+  width: min(880px, 100%);
+  min-height: 0;
+  margin: 22px auto 0;
+  padding: 20px 22px;
+  border: 1px solid rgba(228, 228, 231, 0.9);
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 14px 38px rgba(17, 24, 39, 0.06);
+  color: #1f2937;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.86rem;
+  line-height: 1.65;
+  resize: none;
+  outline: none;
+  white-space: pre-wrap;
+}
+
+.prompt-editor::placeholder {
+  color: #a1a1aa;
+}
+
+.prompt-editor:focus {
+  border-color: #d4d4d8;
+}
+
+.prompt-editor:disabled {
+  background: #fbfbfc;
+  color: #a1a1aa;
+}
+
+.prompt-editor-composer {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  z-index: 5;
+  width: min(740px, calc(100% - 80px));
+  padding: 12px 14px 8px;
+  border: 1px solid rgba(228, 228, 231, 0.9);
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 14px 38px rgba(17, 24, 39, 0.1);
+  transform: translateX(-50%);
+}
+
+.prompt-editor-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prompt-editor-row .wiki-select-label {
+  flex: 0 0 auto;
+  padding-left: 4px;
+}
+
+.prompt-select {
+  flex: 0 1 auto;
+  max-width: 260px;
+  padding: 7px 12px;
+  font-size: 0.82rem;
+}
+
+.prompt-status {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  padding: 5px 2px;
+  color: #a1a1aa;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.prompt-status.is-done {
+  color: #4d7c0f;
+}
+
+.prompt-status.is-error {
+  color: #b91c1c;
+}
+
+.prompt-save {
+  flex: 0 0 auto;
+  display: grid;
+  height: 34px;
+  min-height: 34px;
+  padding: 0 16px;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.14s ease, background 0.14s ease, opacity 0.14s ease;
+}
+
+.prompt-save:hover:not(:disabled) {
+  background: #000000;
+  transform: scale(1.06);
+}
+
+.prompt-save:disabled {
+  cursor: default;
+  opacity: 0.42;
+}
+
+.prompt-footnote {
+  margin: 7px 2px 0;
+  color: #b3b3ba;
+  font-size: 0.68rem;
+  text-align: center;
+}
+
+.wiki-beat {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e6ebf2;
+}
+
+.wiki-beat-note {
+  margin: 0 0 9px;
+  color: #667085;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.wiki-beat.is-empty .wiki-beat-note {
+  color: #b42318;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.wiki-beat-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.wiki-beat-alts {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.wiki-beat-thumb {
+  position: relative;
+  display: grid;
+  gap: 3px;
+  padding: 5px;
+  border: 1px solid #e6ebf2;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.14s ease, transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+.wiki-beat-thumb img {
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #f4f6fa;
+}
+
+.wiki-beat-thumb small {
+  color: #98a2b3;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.wiki-beat-thumb:hover {
+  border-color: #cdd7e3;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.08);
+}
+
+.wiki-beat-chosen .wiki-beat-thumb {
+  padding: 6px;
+  border-color: #b3dd2f;
+  box-shadow: 0 0 0 2px rgba(179, 221, 47, 0.28);
+  cursor: default;
+}
+
+.wiki-beat-chosen .wiki-beat-thumb img {
+  width: 78px;
+  height: 78px;
+}
+
+.wiki-beat-chosen .wiki-beat-thumb small {
+  color: #4d7c0f;
+}
+
+.wiki-beat-thumb.is-picked {
+  border-color: #b3dd2f;
+}
+
+.wiki-beat-chosen {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.wiki-beat-meta {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  max-width: 340px;
+}
+
+.wiki-beat-meta strong {
+  color: #101828;
+  font-size: 0.82rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.wiki-beat-meta > small {
+  color: #667085;
+  font-size: 0.7rem;
+  overflow-wrap: anywhere;
+}
+
+.wiki-beat-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 1px;
+}
+
+.wiki-beat-link {
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #eef2f6;
+  color: #344054;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.14s ease, color 0.14s ease;
+}
+
+.wiki-beat-link:hover {
+  background: #e2e8f0;
+  color: #101828;
+}
+
+.wiki-beat-path {
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid #e6ebf2;
+  border-radius: 8px;
+  background: #fbfcfe;
+  color: #667085;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.66rem;
+  outline: none;
+}
+
+.wiki-beat-path:focus {
+  border-color: #cdd7e3;
+  color: #101828;
+}
+
+.wiki-handoff-link {
+  color: #4d7c0f;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.wiki-handoff-link:hover {
+  text-decoration: underline;
+}
+
+.prompt-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 7px 13px;
+  border: 1px solid #e6ebf2;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #475467;
+  font-size: 0.76rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.14s ease, color 0.14s ease;
+}
+
+.prompt-back:hover {
+  background: #f1f3f6;
+  color: #101828;
+}
+
+.prompt-header {
+  position: relative;
+}
+
+.prompt-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+  gap: 16px;
+  align-content: start;
+  width: min(880px, 100%);
+  margin: 26px auto 0;
+  overflow-y: auto;
+}
+
+.prompt-card {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 20px;
+  border: 1px solid #e6ebf2;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.05);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+}
+
+.prompt-card:hover {
+  border-color: #cdd7e3;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(17, 24, 39, 0.1);
+}
+
+.prompt-card strong {
+  color: #101828;
+  font-size: 1.02rem;
+  font-weight: 800;
+}
+
+.prompt-card-summary {
+  margin: 0;
+  color: #475467;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.prompt-card-meta {
+  color: #98a2b3;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.68rem;
+}
+
+.prompt-card.is-dirty {
+  border-color: #b3dd2f;
+  box-shadow: 0 0 0 2px rgba(179, 221, 47, 0.24);
+}
+
+.prompt-card.is-dirty .prompt-card-meta {
+  color: #4d7c0f;
+}
+
+.wiki-asset-block {
+  display: grid;
+  gap: 10px;
+}
+
+.wiki-asset-heading {
+  margin: 0 0 2px;
+  font-weight: 800;
+}
+
+.wiki-asset-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.wiki-asset-thumb {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #f4f6fa;
+}
+
+.wiki-asset-label {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.wiki-asset-label strong {
+  color: #101828;
+  font-size: 0.84rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.wiki-asset-label small {
+  color: #667085;
+  font-size: 0.7rem;
+  overflow-wrap: anywhere;
+}
+
+.wiki-asset-links {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+}
+
+.wiki-asset-list {
+  display: grid;
+  gap: 8px;
+}
+
+.wiki-asset-action {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.wiki-asset-action.is-danger {
+  background: #fee4e2;
+  color: #b42318;
+}
+
+.wiki-asset-action.is-danger:hover {
+  background: #fecdca;
+  color: #912018;
+}

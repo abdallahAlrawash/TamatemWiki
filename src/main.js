@@ -1,6 +1,7 @@
 import './styles.css';
 import './wiki-overrides.css';
 import { initBrainWindow } from './brain.js';
+import { initScriptWriterWindow } from './scriptWriter.js';
 
 const state = {
   activeWindow: 'script',
@@ -36,6 +37,10 @@ function setWindow(windowName) {
 
   if (windowName === 'brain') {
     void initBrainWindow();
+  }
+
+  if (windowName === 'script-writer') {
+    void initScriptWriterWindow();
   }
 }
 
@@ -83,13 +88,180 @@ function sceneText(scene) {
   ].filter(Boolean).join('\n');
 }
 
+/**
+ * Asset bytes come through the wiki, not straight from the finder: the finder's asset routes are
+ * gated by ASSET_ACCESS_TOKEN and the browser must never hold that token. Falls back to the raw URL
+ * when the asset id is missing.
+ */
+function assetProxyUrl(asset, variant, { download = false } = {}) {
+  if (!asset?.assetId) {
+    return variant === 'preview' ? asset?.previewUrl : asset?.imageUrl;
+  }
+
+  return `/api/asset-proxy/${encodeURIComponent(asset.assetId)}/${variant}${download ? '?download=1' : ''}`;
+}
+
+/**
+ * The ad's asset set, flat rather than per scene. Whatever rows remain here are what the handoff
+ * carries, so Remove and Replace both persist before the row changes.
+ */
+function renderAssetBlock(assets, runId) {
+  const block = document.createElement('article');
+
+  block.className = 'wiki-script-scene wiki-asset-block';
+
+  const heading = document.createElement('p');
+
+  heading.className = 'wiki-asset-heading';
+  block.append(heading);
+
+  const list = document.createElement('div');
+
+  list.className = 'wiki-asset-list';
+  block.append(list);
+
+  let current = [...assets];
+
+  function setHeading(message) {
+    heading.textContent = message
+      || `Assets (${current.length}) — these are what get sent`;
+  }
+
+  async function act(verb, asset) {
+    if (!runId) {
+      setHeading('Cannot change the set — no run id');
+      return null;
+    }
+
+    setHeading(`${verb === 'remove' ? 'Removing' : 'Replacing'} ${asset.fileName}...`);
+
+    try {
+      const response = await fetch(`/api/runs/${encodeURIComponent(runId)}/assets/${verb}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ assetId: asset.assetId }),
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        setHeading(`Could not ${verb} — ${data.error || 'request failed'}`);
+        return null;
+      }
+
+      current = data.selection.selected;
+      paint();
+      setHeading(verb === 'remove'
+        ? `Removed ${asset.fileName} — ${current.length} asset(s) will be sent`
+        : `Replaced ${data.replaced.fileName} with ${data.with.fileName}`);
+
+      return data;
+    } catch (error) {
+      setHeading(`Could not ${verb} — ${error.message}`);
+      return null;
+    }
+  }
+
+  function row(asset) {
+    const item = document.createElement('div');
+
+    item.className = 'wiki-asset-row';
+
+    const thumb = document.createElement('img');
+
+    thumb.className = 'wiki-asset-thumb';
+    // Served through the wiki so the finder's asset token never reaches the browser.
+    thumb.src = assetProxyUrl(asset, 'preview');
+    thumb.alt = asset.fileName || 'asset';
+    thumb.loading = 'lazy';
+    item.append(thumb);
+
+    const label = document.createElement('div');
+
+    label.className = 'wiki-asset-label';
+
+    const name = document.createElement('strong');
+
+    name.textContent = asset.fileName || asset.assetId;
+    label.append(name);
+
+    const facts = document.createElement('small');
+
+    facts.textContent = [
+      asset.folder || '',
+      typeof asset.score === 'number' ? `score ${asset.score.toFixed(3)}` : '',
+    ].filter(Boolean).join('  ·  ');
+    label.append(facts);
+    item.append(label);
+
+    const actions = document.createElement('div');
+
+    actions.className = 'wiki-asset-links';
+
+    for (const [text, href] of [
+      ['Preview', assetProxyUrl(asset, 'preview')],
+      ['Download', assetProxyUrl(asset, 'file', { download: true })],
+    ]) {
+      const link = document.createElement('a');
+
+      link.className = 'wiki-beat-link';
+      link.href = href;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = text;
+      actions.append(link);
+    }
+
+    for (const [text, verb, extraClass] of [
+      ['Replace', 'replace', ''],
+      ['Remove', 'remove', 'is-danger'],
+    ]) {
+      const button = document.createElement('button');
+
+      button.type = 'button';
+      button.className = `wiki-beat-link wiki-asset-action ${extraClass}`.trim();
+      button.textContent = text;
+      button.addEventListener('click', () => void act(verb, asset));
+      actions.append(button);
+    }
+
+    item.append(actions);
+
+    return item;
+  }
+
+  function paint() {
+    list.innerHTML = '';
+
+    for (const asset of current) {
+      list.append(row(asset));
+    }
+
+    setHeading();
+  }
+
+  paint();
+
+  return block;
+}
+
 function renderScript(result) {
   const script = result.script || {};
   const scenes = Array.isArray(script.scenes) ? script.scenes : [];
   const sfx = Array.isArray(script.background_sfx) ? script.background_sfx : [];
-
   outputTitle.textContent = 'Script written';
   outputMeta.textContent = result.model ? `Model: ${result.model}` : '';
+
+  if (result.runId) {
+    const handoff = document.createElement('a');
+
+    handoff.className = 'wiki-handoff-link';
+    handoff.href = `/api/runs/${encodeURIComponent(result.runId)}/handoff`;
+    handoff.target = '_blank';
+    handoff.rel = 'noopener noreferrer';
+    handoff.textContent = 'handoff.json';
+    outputMeta.append(' · ', handoff);
+  }
+
   outputBody.innerHTML = '';
 
   for (const scene of scenes) {
@@ -104,6 +276,13 @@ function renderScript(result) {
     block.className = 'wiki-script-scene';
     block.textContent = `Background SFX\n${sfx.map((item) => `- ${item}`).join('\n')}`;
     outputBody.append(block);
+  }
+
+  // Assets are their own block after Background SFX and styled the same way. Ad-level, not per scene.
+  const assets = result.assetSelection?.selected || [];
+
+  if (assets.length) {
+    outputBody.append(renderAssetBlock(assets, result.runId));
   }
 
   setResultVisible(true);

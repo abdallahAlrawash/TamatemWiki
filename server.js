@@ -5,6 +5,10 @@ import { fileURLToPath } from 'node:url';
 import { captureThought } from './shared/ai-calls/brainCapture.js';
 import { selectBrainContext } from './shared/ai-calls/brainSelector.js';
 import { listGames } from './shared/ai-calls/gameLibrary.js';
+import { listPrompts, readPrompt, writePrompt } from './shared/ai-calls/promptFiles.js';
+import { readHandoff, writeHandoff } from './shared/ai-calls/beatPicks.js';
+import { removeAsset, replaceAsset } from './shared/ai-calls/assetSelection.js';
+import { fetchAsset, parseAssetProxyPath } from './shared/ai-calls/assetProxy.js';
 import { generateUgcScript } from './shared/ai-calls/ugcScriptWriter.js';
 import { answerWikiQuestion } from './shared/ai-calls/wikiResponder.js';
 
@@ -124,6 +128,115 @@ const server = createServer(async (request, response) => {
     return;
   }
 
+  // Asset bytes for the browser. The finder's routes need ASSET_ACCESS_TOKEN, which must never
+  // reach the client, so the token is attached here instead.
+  const assetProxy = parseAssetProxyPath(url.pathname);
+
+  if (assetProxy && request.method === 'GET') {
+    try {
+      const asset = await fetchAsset({
+        ...assetProxy,
+        download: url.searchParams.get('download') === '1',
+      });
+      const headers = {
+        'Content-Type': asset.contentType,
+        'Cache-Control': 'private, max-age=300',
+      };
+
+      if (asset.contentDisposition) {
+        headers['Content-Disposition'] = asset.contentDisposition;
+      }
+
+      response.writeHead(200, headers);
+      response.end(asset.body);
+    } catch (error) {
+      sendJson(response, error.statusCode || 502, { error: error.message });
+    }
+
+    return;
+  }
+
+  // The downstream UGC-ad agent reads this: script + exactly one asset per scene.
+  if (/^\/api\/runs\/[^/]+\/handoff$/.test(url.pathname) && request.method === 'GET') {
+    try {
+      sendJson(response, 200, await readHandoff(url.pathname.split('/')[3], { cwd: __dirname }));
+    } catch (error) {
+      sendJson(response, 404, { error: error.message });
+    }
+
+    return;
+  }
+
+  // Choose / remove / replace happen on the ad-level asset pool; the survivors are what ship.
+  if (/^\/api\/runs\/[^/]+\/assets\/(remove|replace)$/.test(url.pathname) && request.method === 'POST') {
+    const [, , , runId, , verb] = url.pathname.split('/');
+
+    try {
+      const body = await readJsonBody(request);
+      const action = verb === 'remove' ? removeAsset : replaceAsset;
+      const result = await action({ runId, assetId: body.assetId, cwd: __dirname });
+
+      // Keep handoff.json in step so the downstream always reads the current set.
+      const runDir = path.join(__dirname, 'storage', 'outputs', path.basename(runId));
+      let script = { scenes: [] };
+      let beats = [];
+
+      try {
+        script = JSON.parse(await readFile(path.join(runDir, 'ugc-script.json'), 'utf8'));
+      } catch { /* handoff still writes, without scene prose */ }
+
+      try {
+        beats = JSON.parse(await readFile(path.join(runDir, 'asset-beats.json'), 'utf8')).beats || [];
+      } catch { /* no beats file when sourcing was off */ }
+
+      await writeHandoff({
+        runId,
+        gameId: body.gameId,
+        game: body.game,
+        script,
+        beats,
+        selection: result.selection,
+        cwd: __dirname,
+      });
+      sendJson(response, 200, result);
+    } catch (error) {
+      sendJson(response, 400, { error: error.message });
+    }
+
+    return;
+  }
+
+  if (url.pathname === '/api/prompts' && request.method === 'GET') {
+    sendJson(response, 200, { prompts: await listPrompts({ cwd: __dirname }) });
+    return;
+  }
+
+  if (url.pathname.startsWith('/api/prompts/') && request.method === 'GET') {
+    try {
+      sendJson(response, 200, await readPrompt(url.pathname.slice('/api/prompts/'.length), {
+        cwd: __dirname,
+      }));
+    } catch (error) {
+      sendJson(response, 404, { error: error.message });
+    }
+
+    return;
+  }
+
+  if (url.pathname.startsWith('/api/prompts/') && request.method === 'POST') {
+    try {
+      const body = await readJsonBody(request);
+
+      sendJson(response, 200, await writePrompt(url.pathname.slice('/api/prompts/'.length), body.text, {
+        cwd: __dirname,
+      }));
+    } catch (error) {
+      sendJson(response, 500, { error: error.message });
+    }
+
+    return;
+  }
+
   if (url.pathname === '/api/brain' && request.method === 'GET') {
     try {
       sendJson(response, 200, JSON.parse(await readFile(path.join(__dirname, 'storage', 'brain.json'), 'utf8')));
@@ -221,6 +334,8 @@ const server = createServer(async (request, response) => {
       sendJson(response, 200, await generateUgcScript({
         gameId: body.gameId || undefined,
         userBrief: body.userBrief,
+        // Off for the UGC ad; the storytelling ad opts in.
+        sourceAssets: body.sourceAssets === true,
       }));
     } catch (error) {
       sendJson(response, 500, { error: error.message });

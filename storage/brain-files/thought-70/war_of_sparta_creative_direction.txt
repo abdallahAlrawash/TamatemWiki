@@ -1,0 +1,183 @@
+# WAR OF SPARTA — CREATIVE DIRECTION
+
+A guiding document for the creative and content direction of War of Sparta (حرب سبارتا: انتقام الأبطال). It defines the vision, tone, narrative arc, creative pillars, and the visual, audio, and messaging language that every asset should express. It is intentionally scoped to creative direction only — no media budgets, schedules, channel-buying tactics, or named partners.
+
+---
+
+## 1. Creative Vision (North Star)
+
+War of Sparta is positioned as the **definitive, fully Arabic, cinematic RTS** — a game where the spectacle of ancient Spartan warfare meets the pride and rivalry of the modern Arab gaming community. Every piece of creative should feel like a moment from an epic: rain-soaked battlefields, thunder, roaring armies, and heroes who decide the fate of nations.
+
+The creative promise in one line:
+
+> **"Glory or death — this is our law."**
+
+We sell three feelings, in this order: **spectacle** (this looks like a blockbuster), **belonging** (my country, my alliance, my people), and **power** (I command, I dominate, I am the legend).
+
+---
+
+## 2. Brand Positioning & Tone
+
+**Positioning:** The newest, strongest, and most cinematic Arabic strategy game — a fresh, modern release, not an update to an older title. It bridges cinematic nostalgia (the *300* aesthetic) with deep, next-generation strategic gameplay.
+
+**Tone spectrum** (creative should move fluidly across it depending on format):
+
+- **Epic & cinematic** — the default register. Mythic, heroic, high-stakes, orchestral.
+- **Proud & patriotic** — when alliances and national identity are on screen. Rousing, celebratory.
+- **Provocative & playful** — for rivalry, banter, and community-driven content. Bold, teasing, competitive.
+- **Authentic & conversational** — for creator/presenter content. A trusted voice speaking to "الشباب" directly.
+
+**Always:** grand, confident, dramatic, unmistakably Arab.
+**Never:** generic, small-scale, text-only, or culturally neutral.
+
+---
+
+## 3. Audience & Psychology
+
+Core audience: Arabic-speaking strategy and war-game players across the GCC and wider MENA, with a strong pull for fans of the film *300* and hardcore RTS players seeking "the next big thing."
+
+The creative leans on five psychological levers:
+
+- **Power fantasy** — show the player winning, dominating, ruling. Thrones, titles (e.g. "حاكم المملكة"), server rankings, owning key landmarks.
+- **Social bonds / belonging** — success is impossible alone; your alliance is your people. This drives loyalty and retention, not just installs.
+- **National pride** — represent your country, raise your flag, prove Arab heroes to the world.
+- **Provocation & rivalry** — the shame of defeat and the glory of mocking a fallen rival; PvP friction converted into long-term engagement.
+- **Launch hype & FOMO** — the era has begun; don't be the one left out of history.
+
+---
+
+## 4. Narrative Arc (Campaign Phases)
+
+The creative story evolves in three phases. Each phase has a distinct emotional focus and core message, but all share the same visual and audio DNA.
+
+### Phase 1 — The Grand Launch: "A New Era of Arabic Strategy"
+Introduce the game as a brand-new, premier Arabic RTS. Generate launch hype, target *300* fans and hardcore strategists, and prove full Arabic localization (voiceover, flags, text, cultural identity).
+
+- **Core message:** *"The Legend Returns in a New Era — Lead the Spartans in Your Language."*
+- **Feeling:** arrival, nostalgia, FOMO, "it has finally arrived."
+- **Emphasis:** the *300* connection, cinematic fidelity, and early-adopter power fantasy ("claim your place").
+
+### Phase 2 — The Sovereign Alliance: "Forging a New Empire"
+Shift from installs to loyalty. Emphasize that no one wins alone, showcase real-time "live" battle mastery on the world map, and establish the competitive hierarchy — server rankings and the prestige of holding landmarks like the Temple and Olympus Hill.
+
+- **Core message:** *"Forged in Battle, United by Honor — Your Alliance, Your Empire, Your Legend."*
+- **Feeling:** brotherhood, honor, ambition, collective domination.
+- **Emphasis:** alliances, live tactical battles, hero depth, the climb to the top of the server.
+
+### Phase 3 — The Spartan Reckoning: "Blood, Steel, and Betrayal"
+Transition into a high-intensity conflict phase built on the raw emotions of ancient warfare: the sting of insults, the necessity of preparation, the complexity of the world map, and the glory of total war.
+
+- **Core message:** *"Mock Their Weakness. Forge Your Strength. Redraw the Map in Their Blood."*
+- **Feeling:** rivalry, defiance, reckoning, all-out war.
+- **Emphasis:** provocation and rivalry, mastery of the world map (positioning, resource nodes, fog of war), the art of preparation (forge/barracks), and alliance-wide total war that reshapes the map.
+
+---
+
+## 5. Core Creative Pillars
+
+Every asset should ladder up to one of four recurring content territories. These rotate continuously across the calendar.
+
+1. **Alliance & Strategy** — the power of joining forces; national and regional alliances; coordinating attacks; the world map as a shared battlefield that "gathers all Arabs on one map."
+2. **Cinematics & Domination** — blockbuster, film-grade storytelling; hero moments, oaths, marches, sieges, and last stands that sell spectacle and the power fantasy.
+3. **Heroes, Collectors & Story** — the mythic roster and their lore; upgrading and "collecting" heroes; skills that turn the tide of battle.
+4. **Gameplay & Live Battle** — real-time battles seen on the map, city building and upgrades, tactical troop control, victory/reward moments, and throne/ranking status.
+
+---
+
+## 6. Visual Language & Art Direction
+
+**Overall look:** cinematic, high-contrast, and dramatic — a live-action / high-fidelity CG feel inspired by the *300* aesthetic, not a flat mobile-game look.
+
+Signature visual ingredients seen and to be reinforced across the creative:
+
+- **Weather & atmosphere as drama:** rain, thunder and lightning, sandstorms, golden-hour sunsets, starry desert nights, campfire embers.
+- **The Spartan hero silhouette:** red cape, bronze armor, battle scars, spear and shield; often shot from behind walking through the ranks, or posed on a cliff.
+- **Mythic heroes with companion beasts,** each in an evocative environment — e.g. a warrior with a wolf in a snow forest, a queen with a glowing lion in a temple, a fire-bearer with a phoenix, a seafarer with an eagle in a storm, a champion with Pegasus at sunset. Beasts, dragons, giants, harpies, and hellhounds extend the fantasy scale.
+- **National identity woven into the world:** commanders and armies carrying **national flags** staged in front of **recognizable Arab landmarks** (e.g. Hegra, Petra, the Pyramids, Ziggurats, Kuwait Towers, historic dhows), plus color-coded siege engines, cavalry, and naval fleets per country.
+- **Scale:** armies "beyond the eye can see," fleets in formation, sweeping aerial shots of two armies facing off across a plain.
+- **The Trojan Horse** as a recurring iconic set-piece and end-card motif.
+- **Gameplay shown proudly:** city-building upgrade taps, top-down tactical battles (cavalry, archers, catapults), victory screens, throne room and prestige titles, and the world map with its "throne of power."
+
+**Color & mood:** deep bronzes and reds, storm-grey skies, fiery gold highlights; darkness pierced by torchlight, lightning, or magical energy.
+
+---
+
+## 7. Audio & Music Identity
+
+Sound is half the spectacle. The audio signature:
+
+- **Epic orchestral scores** with swelling brass, choral pads, and cinematic strings for hero and cinematic content.
+- **War drums and pounding percussion** to drive marches, sieges, and battle sequences.
+- **Deep bass "boom" impacts** as transition and end-card punctuation — a recognizable sonic stamp.
+- **Environmental SFX as texture:** thunder, rain, ocean and wave splashes, desert wind, fire crackle, galloping hooves, shield clashes, creaking siege machinery, animal calls (falcon, phoenix, lion).
+- **Upbeat Arabic vocal / percussion tracks** for alliance showcases, patriotic content, and creator-led pieces.
+- **Signature vocal moment:** the *"THIS IS SPARTA!"* shout as a nostalgia trigger and attention hook.
+
+---
+
+## 8. Signature Devices & Motifs
+
+Recurring creative "hooks" that build recognition and can be reused and remixed:
+
+- **The kick-into-the-pit** *("THIS IS SPARTA!")* — the hero-moment gag/homage that instantly signals the brand and the *300* lineage.
+- **Hero-with-beast reveals** — one hero, one companion creature, one environment, one hero-skill payoff.
+- **Country roll-call showcases** — the same beat repeated per nation (commander + flag + landmark), across formats: cavalry charge, naval fleet, siege engines, marching armies.
+- **Transformation moments** — an underdog/injured hero rising and transforming (e.g. golden lion armor) into a dominant force: the power-fantasy arc in miniature.
+- **The preparation ritual** — campfire, blacksmith sparks, sharpening spears, strapping armor: "the war is won before the first spear is thrown."
+- **The tactical map play** — playful, banter-driven "how I'd conquer my neighbors" content using recognizable units (Trojan Horse, giants, harpies, hellhounds) and friendly GCC rivalry.
+- **The female Spartan warrior** — defiant, dominant hero moments ("قاتلني إن استطعت"، "هيا بنا يا سبارتنز").
+
+---
+
+## 9. Localization & Cultural Identity
+
+Arabic identity is not a translation layer — it is a core creative pillar and a competitive differentiator.
+
+- **Fully Arabic experience:** Arabic voiceover, on-screen text, and UI.
+- **National alliances & flags:** players represent their country; flags and country pride are front and center ("ارفع علمك وخلي العالم يعرف من هم أبطال العرب").
+- **Regional landmarks** anchor the fantasy in the audience's own world.
+- **Culturally native settings** for creator/presenter content — majlis, traditional tents, thobes — so the game feels like it belongs to the community.
+- **Seasonal and occasion-based** creative tied to Arab moments, and the ability to fly your country's flag inside the game.
+- **Community & rivalry framing:** alliances "gather all Arabs on one map," turning national pride into friendly, competitive spectacle.
+
+---
+
+## 10. Messaging & Copy System
+
+**Primary descriptor (on-screen):** *"لعبة إستراتيجية جديدة بآلاف سبارتا"* — a new strategy game, positioned as fresh and large-scale.
+
+**Brand line / ethos:** *"المجد أو الموت؛ هذا قانوننا"* ("Glory or death — this is our law").
+
+**Phase core messages** (see Section 4) headline each campaign wave.
+
+**Recurring community hooks:** "الحرب بدأت الآن"، "العرش ينتظرك"، "خطط وتحالف مع ربعك"، "ابني مدينتك وجيشك واخذ لقب حاكم المملكة".
+
+**Standard call to action / end line (VO + text):** *"حرب سبارتا: انتقام الأبطال — العبها الآن"* / "حرب سبارتا قد بدأت. العبها الآن."
+
+**Copy principles:** short, punchy, and declarative; command verbs (build, forge, ally, conquer, dominate); pride and provocation over feature lists; always end on a clear, confident CTA.
+
+---
+
+## 11. Content Formats
+
+The creative system spans a consistent set of format types, each mapping to the pillars and phases above:
+
+- **Cinematic hero/story spots** — mythic, film-grade, emotion-led (oaths, last stands, transformations).
+- **Roster & hero showcases** — reveal the legendary characters and their companion beasts and skills.
+- **Alliance & national showcases** — country-by-country pride pieces (cavalry, naval, siege, marching).
+- **Gameplay walkthroughs & demos** — city building, live tactical battles, hero upgrades, world-map strategy.
+- **Creator / influencer & presenter content** — testimonials, first impressions, and native-setting walkthroughs in an authentic Arabic voice.
+- **Playful strategy / banter content** — community-driven, rivalry-fueled tactical scenarios.
+
+---
+
+## 12. End-Card & Branding Standards
+
+Every asset closes on a consistent, recognizable brand lockup:
+
+- **Hero end frame:** the Spartan hero on a cliff at sunset, or a warrior with a torch before the Trojan Horse under moonlight.
+- **Logo & title:** *حرب سبارتا — انتقام الأبطال*.
+- **CTA:** *العبها الآن* with Google Play and App Store badges.
+- **Sonic stamp:** deep bass boom into a triumphant orchestral outro.
+
+Consistency of this end lockup across every piece is what compounds recognition over the whole campaign.

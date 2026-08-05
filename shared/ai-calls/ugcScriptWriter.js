@@ -5,6 +5,9 @@ import { assembleBrainContext } from './brainSelector.js';
 import { logCost } from './costLedger.js';
 import { getGame } from './gameLibrary.js';
 import { ensureRunOutputDir } from './runFolders.js';
+import { extractBeats, getCatalogGame, sourceBeatAssets } from './scriptBeats.js';
+import { writeHandoff } from './beatPicks.js';
+import { buildSelection, writeSelection } from './assetSelection.js';
 
 const defaultGameId = 'VIPBaloot';
 const promptPath = path.join('storage', 'prompts', 'ugc-script-writer.txt');
@@ -82,7 +85,13 @@ function buildPrompt(template, brainContext, sceneSetupDirection, userBrief) {
     .replace('{{USER_BRIEF}}', userBrief?.trim() || '(none — write freely)');
 }
 
-export async function generateUgcScript({ gameId = defaultGameId, sceneSetupDirection = '', userBrief = '' } = {}) {
+export async function generateUgcScript({
+  gameId = defaultGameId,
+  sceneSetupDirection = '',
+  userBrief = '',
+  // The UGC ad is script-only. Asset sourcing belongs to the storytelling ad, so it is opt-in.
+  sourceAssets = false,
+} = {}) {
   const { outputDir, runId } = await ensureRunOutputDir();
   const game = await getGame(gameId);
   const brief = game ? [game.name, game.brief].filter(Boolean).join(': ') : gameId;
@@ -156,15 +165,67 @@ export async function generateUgcScript({ gameId = defaultGameId, sceneSetupDire
     'utf8',
   );
 
+  // Asset-finder handoff (docs/script-writer-integration.md). The human-readable script above is
+  // unchanged; this only appends the machine-readable beat block. A finder outage must never fail
+  // script writing, so every failure mode degrades to beats-without-assets.
+  let beatBlock = null;
+  let beatsPath = null;
+  let selection = null;
+
+  if (sourceAssets) {
+    const catalog = await getCatalogGame(gameId);
+
+    beatBlock = extractBeats({
+      script: orderedScript,
+      gameId,
+      // Only the mapped catalog value -- never fall back to the wiki's own display name, which the
+      // finder cannot resolve and would silently drop.
+      catalogGame: catalog?.catalogGame || null,
+      alias: catalog?.alias,
+      userBrief,
+    });
+
+    try {
+      beatBlock.beats = await sourceBeatAssets({
+        beats: beatBlock.beats,
+        catalogGame: beatBlock.game,
+      });
+    } catch (error) {
+      beatBlock.assetFinderError = error.message;
+    }
+
+    beatsPath = path.join(outputDir, 'asset-beats.json');
+
+    await writeFile(beatsPath, `${JSON.stringify(beatBlock, null, 2)}\n`, 'utf8');
+
+    // Flatten the per-beat results into the ad-level pool the UI edits.
+    selection = await writeSelection({ runId, selection: buildSelection(beatBlock.beats) });
+  }
+
+  // handoff.json is the downstream contract: script + exactly one asset per scene.
+  const handoff = await writeHandoff({
+    runId,
+    gameId,
+    game: beatBlock?.game ?? null,
+    script: orderedScript,
+    beats: beatBlock?.beats ?? [],
+    selection,
+  });
+
   return {
     gameId,
     runId,
     outputDir,
     outputPath,
     brainContextPath,
+    beatsPath,
+    handoffPath: path.join(outputDir, 'handoff.json'),
     responseId: result.id,
     model: result.model,
     script: orderedScript,
     brainSelection: brain.chosen,
+    assetBeats: beatBlock,
+    assetSelection: selection,
+    handoff,
   };
 }
