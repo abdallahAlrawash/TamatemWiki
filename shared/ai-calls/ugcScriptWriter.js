@@ -213,6 +213,8 @@ export async function generateUgcScript({
   });
 
   return {
+    mode: 'ugc',
+    writer: 'ugc-script-writer',
     gameId,
     runId,
     outputDir,

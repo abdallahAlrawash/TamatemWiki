@@ -1,9 +1,9 @@
 /**
  * Final asset selection and the downstream handoff artifact.
  *
- * asset-beats.json is what the finder returned. handoff.json is what the next agent consumes: the
- * script plus exactly one asset per beat, after any human correction. Keeping them separate means a
- * re-pick never loses the original shortlist.
+ * asset-beats.json records how sourcing ran. handoff.json is what the next agent consumes: the script
+ * plus the ad-level asset set after any human correction. Keeping them separate means a re-pick never
+ * loses the original shortlist.
  */
 
 import { readFile, writeFile } from 'node:fs/promises';
@@ -49,6 +49,8 @@ function assetForHandoff(asset, publicBase) {
 
   return {
     assetId: asset.assetId,
+    // The cast entry this asset stands in for, so the storyboard agent can place it without guessing.
+    character: asset.character ?? null,
     fileName: asset.fileName,
     imageUrl: toPublicUrl(asset.imageUrl, publicBase),
     previewUrl: toPublicUrl(asset.previewUrl, publicBase),
@@ -69,25 +71,38 @@ function assetForHandoff(asset, publicBase) {
 export function buildHandoff({ runId, gameId, game, script, beats, selection = null, publicBase = null }) {
   const byScene = new Map((beats || []).map((beat) => [beat.sceneId, beat]));
   const scenes = Array.isArray(script?.scenes) ? script.scenes : [];
+  const isStorytelling = Array.isArray(script?.characters);
 
   return {
     runId,
     gameId,
     game: game ?? null,
+    characters: script?.characters ?? [],
     backgroundSfx: script?.background_sfx ?? [],
     assets: (selection?.selected ?? []).map((asset) => assetForHandoff(asset, publicBase)),
     scenes: scenes.map((scene) => {
+      if (isStorytelling) {
+        return {
+          scene_number: scene.scene_number,
+          setting: scene.setting,
+          scene_description: scene.scene_description,
+          narration: scene.narration,
+        };
+      }
+
       const sceneId = scene.scene_id || `SC${scene.scene_number || ''}`;
       const beat = byScene.get(sceneId);
 
       return {
         sceneId,
-        durationSec: scene.duration_seconds ?? null,
-        description: scene.description ?? '',
-        image: scene.image ?? '',
+        durationSec: scene.duration_seconds ?? beat?.durationSec ?? null,
+        description: scene.description ?? scene.scene_description ?? '',
+        image: scene.image ?? scene.scene_description ?? '',
         screen: scene.screen ?? null,
-        vo: scene.vo ?? '',
+        vo: scene.vo ?? scene.narration ?? '',
         action: scene.action ?? '',
+        setting: scene.setting ?? null,
+        characters: scene.characters ?? [],
         assetBrief: beat?.brief ?? null,
       };
     }),

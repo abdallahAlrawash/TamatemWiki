@@ -65,6 +65,7 @@ export function clampLimit(limit) {
 export class AssetFinderClient {
   #endpoint = null;
   #options = null;
+  #charactersByGame = new Map();
 
   constructor(baseUrl, authHeader = {}) {
     this.baseUrl = String(baseUrl || defaultBaseUrl).replace(/\/+$/, '');
@@ -177,12 +178,37 @@ export class AssetFinderClient {
 
     this.#options = {
       games: Array.isArray(data.games) ? data.games : [],
-      // Not exposed today (/api/search/characters etc. all 404). When the finder adds it, the
-      // character filter becomes usable without guessing -- until then this stays empty.
+      // Game options do not inline the much larger character registry; use searchCharacters(game).
       characters: Array.isArray(data.characters) ? data.characters : [],
     };
 
     return this.#options;
+  }
+
+  /** Catalog-backed character names for one game, including pending manual uploads when exposed. */
+  async searchCharacters(game) {
+    const key = String(game || '').trim().toLowerCase();
+
+    if (this.#charactersByGame.has(key)) {
+      return this.#charactersByGame.get(key);
+    }
+
+    const query = game ? `?game=${encodeURIComponent(game)}` : '';
+    const response = await fetch(`${this.baseUrl}/api/search/characters${query}`, {
+      headers: this.authHeader,
+      signal: AbortSignal.timeout(15000),
+    });
+
+    if (!response.ok) {
+      throw new Error(`/api/search/characters HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+    const characters = Array.isArray(data.characters) ? data.characters : [];
+
+    this.#charactersByGame.set(key, characters);
+
+    return characters;
   }
 }
 

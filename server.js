@@ -5,11 +5,17 @@ import { fileURLToPath } from 'node:url';
 import { captureThought } from './shared/ai-calls/brainCapture.js';
 import { selectBrainContext } from './shared/ai-calls/brainSelector.js';
 import { listGames } from './shared/ai-calls/gameLibrary.js';
-import { listPrompts, readPrompt, writePrompt } from './shared/ai-calls/promptFiles.js';
+import {
+  deletePrompt,
+  listPrompts,
+  readPrompt,
+  renamePrompt,
+  writePrompt,
+} from './shared/ai-calls/promptFiles.js';
 import { readHandoff, writeHandoff } from './shared/ai-calls/beatPicks.js';
 import { removeAsset, replaceAsset } from './shared/ai-calls/assetSelection.js';
 import { fetchAsset, parseAssetProxyPath } from './shared/ai-calls/assetProxy.js';
-import { generateUgcScript } from './shared/ai-calls/ugcScriptWriter.js';
+import { generateScript } from './shared/ai-calls/scriptRouter.js';
 import { answerWikiQuestion } from './shared/ai-calls/wikiResponder.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -49,6 +55,7 @@ async function readJsonBody(request) {
 function sendJson(response, statusCode, data) {
   response.writeHead(statusCode, {
     'Content-Type': 'application/json; charset=utf-8',
+    'Cache-Control': 'no-store',
   });
   response.end(JSON.stringify(data));
 }
@@ -71,6 +78,7 @@ async function serveStatic(request, response) {
 
       response.writeHead(200, {
         'Content-Type': contentTypes[path.extname(filePath)] || 'application/octet-stream',
+        'Cache-Control': 'no-store',
       });
       response.end(file);
     } catch {
@@ -94,6 +102,9 @@ async function serveStatic(request, response) {
 
     response.writeHead(200, {
       'Content-Type': contentTypes[path.extname(filePath)] || 'application/octet-stream',
+      // This is a local, actively edited app. Prevent Safari from keeping an old HTML/JS pair after
+      // a rebuild, which otherwise makes new response fields look blank in an older renderer.
+      'Cache-Control': 'no-store',
     });
     response.end(file);
   } catch {
@@ -102,6 +113,7 @@ async function serveStatic(request, response) {
 
       response.writeHead(200, {
         'Content-Type': 'text/html; charset=utf-8',
+        'Cache-Control': 'no-store',
       });
       response.end(file);
     } catch {
@@ -116,7 +128,7 @@ const server = createServer(async (request, response) => {
   if (request.method === 'OPTIONS') {
     response.writeHead(204, {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     });
     response.end();
@@ -180,19 +192,28 @@ const server = createServer(async (request, response) => {
       const runDir = path.join(__dirname, 'storage', 'outputs', path.basename(runId));
       let script = { scenes: [] };
       let beats = [];
+      let previousHandoff = {};
 
       try {
         script = JSON.parse(await readFile(path.join(runDir, 'ugc-script.json'), 'utf8'));
-      } catch { /* handoff still writes, without scene prose */ }
+      } catch {
+        try {
+          script = JSON.parse(await readFile(path.join(runDir, 'storytelling-script.json'), 'utf8'));
+        } catch { /* handoff still writes, without scene prose */ }
+      }
 
       try {
         beats = JSON.parse(await readFile(path.join(runDir, 'asset-beats.json'), 'utf8')).beats || [];
       } catch { /* no beats file when sourcing was off */ }
 
+      try {
+        previousHandoff = await readHandoff(runId, { cwd: __dirname });
+      } catch { /* first handoff may not exist on an interrupted run */ }
+
       await writeHandoff({
         runId,
-        gameId: body.gameId,
-        game: body.game,
+        gameId: body.gameId || previousHandoff.gameId,
+        game: body.game || previousHandoff.game,
         script,
         beats,
         selection: result.selection,
@@ -218,6 +239,34 @@ const server = createServer(async (request, response) => {
       }));
     } catch (error) {
       sendJson(response, 404, { error: error.message });
+    }
+
+    return;
+  }
+
+  if (url.pathname.startsWith('/api/prompts/') && request.method === 'DELETE') {
+    try {
+      sendJson(response, 200, await deletePrompt(url.pathname.slice('/api/prompts/'.length), {
+        cwd: __dirname,
+      }));
+    } catch (error) {
+      sendJson(response, 400, { error: error.message });
+    }
+
+    return;
+  }
+
+  if (url.pathname.startsWith('/api/prompts/') && request.method === 'PATCH') {
+    try {
+      const body = await readJsonBody(request);
+
+      sendJson(response, 200, await renamePrompt(
+        url.pathname.slice('/api/prompts/'.length),
+        body.name,
+        { cwd: __dirname },
+      ));
+    } catch (error) {
+      sendJson(response, 400, { error: error.message });
     }
 
     return;
@@ -331,9 +380,10 @@ const server = createServer(async (request, response) => {
     try {
       const body = await readJsonBody(request);
 
-      sendJson(response, 200, await generateUgcScript({
+      sendJson(response, 200, await generateScript({
         gameId: body.gameId || undefined,
         userBrief: body.userBrief,
+        scriptMode: body.scriptMode,
         // Off for the UGC ad; the storytelling ad opts in.
         sourceAssets: body.sourceAssets === true,
       }));

@@ -2,6 +2,126 @@
   min-height: calc(100vh - 48px);
 }
 
+.prompt-toolbar {
+  display: flex;
+  justify-content: center;
+  width: min(880px, 100%);
+  margin: 20px auto 0;
+}
+
+.prompt-upload {
+  padding: 9px 18px;
+  border: 1px solid #e6ebf2;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #344054;
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+}
+
+.prompt-upload:hover {
+  border-color: #cdd7e3;
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.prompt-card-actions {
+  display: flex;
+  gap: 7px;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.prompt-card-rename,
+.prompt-card-remove,
+.prompt-card-rename-save,
+.prompt-card-rename-cancel {
+  padding: 5px 11px;
+  border: 0;
+  border-radius: 999px;
+  background: #f4f6fa;
+  color: #667085;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.14s ease, color 0.14s ease;
+}
+
+.prompt-card-rename:hover {
+  background: #e8eef7;
+  color: #344054;
+}
+
+.prompt-rename-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+  width: 100%;
+}
+
+.prompt-rename-form[hidden] {
+  display: none;
+}
+
+.prompt-rename-input {
+  flex: 1 0 100%;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid #cdd7e3;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #101828;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  outline: none;
+}
+
+.prompt-rename-input:focus {
+  border-color: #98a2b3;
+  box-shadow: 0 0 0 2px rgba(152, 162, 179, 0.18);
+}
+
+.prompt-card-rename-save {
+  background: #e8eef7;
+  color: #344054;
+}
+
+.prompt-card-rename-cancel:hover,
+.prompt-card-rename-save:hover {
+  background: #dfe7f2;
+  color: #101828;
+}
+
+.prompt-card-remove:hover {
+  background: #fee4e2;
+  color: #b42318;
+}
+
+.prompt-card-remove.is-armed {
+  background: #fee4e2;
+  color: #b42318;
+}
+
+.prompt-card-rename:disabled,
+.prompt-card-remove:disabled,
+.prompt-card-rename-save:disabled,
+.prompt-card-rename-cancel:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.prompt-card-locked {
+  color: #b3b3ba;
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-align: right;
+}
+
 .wiki-script-window {
   padding-top: 150px;
 }
@@ -151,6 +271,15 @@
   color: #172033;
   line-height: 1.65;
   padding: 18px;
+}
+
+.wiki-story-json {
+  margin: 0;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  white-space: pre;
 }
 
 .wiki-memory-used strong {
