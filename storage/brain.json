@@ -1,49 +1,49 @@
 {
   "version": 1,
-  "counter": 67,
+  "counter": 71,
   "nodes": [
     {
       "id": "core",
       "type": "core",
-      "x": 901.5,
-      "y": 435.5
+      "x": 669,
+      "y": 360.5
     },
     {
       "id": "game-knowledge",
       "type": "section",
-      "x": 789.3674812256103,
-      "y": 374.6731828260102
+      "x": 556.2357206846557,
+      "y": 301.68597495507726
     },
     {
       "id": "audience-personas",
       "type": "section",
-      "x": 1079.276335703228,
-      "y": 460.1991725355548
+      "x": 846.7763357032279,
+      "y": 385.1991725355548
     },
     {
       "id": "game-assets",
       "type": "section",
-      "x": 989.1220171231654,
-      "y": 547.6540475118038
+      "x": 725.9467153880781,
+      "y": 477.36347421889025
     },
     {
       "id": "performance-learnings",
       "type": "section",
-      "x": 791.4166305093903,
-      "y": 561.1429650105878
+      "x": 571.063337951942,
+      "y": 498.96895222637346
     },
     {
       "id": "production-rules",
       "type": "section",
-      "x": 710.3619884455583,
-      "y": 462.789758205862
+      "x": 485.60884456394064,
+      "y": 406.80227388159204
     },
     {
       "id": "group-1",
       "type": "group",
       "parentId": "game-knowledge",
-      "x": 1063.887478734694,
-      "y": 303.69044126186463,
+      "x": 831.387478734694,
+      "y": 228.69044126186463,
       "label": "LOH",
       "description": "LOH"
     },
@@ -51,8 +51,8 @@
       "id": "group-3",
       "type": "group",
       "parentId": "game-knowledge",
-      "x": 901.3911691677088,
-      "y": 294.1181841255559,
+      "x": 670.8216709185482,
+      "y": 217.75262993297432,
       "label": "VIP Baloot",
       "description": ""
     },
@@ -60,8 +60,8 @@
       "id": "group-5",
       "type": "group",
       "parentId": "game-knowledge",
-      "x": 685.7319714825683,
-      "y": 275.3100133476063,
+      "x": 482.50254436733684,
+      "y": 184.94692159696322,
       "label": "WOS",
       "description": "Game information for the game War of Sparta"
     },
@@ -69,8 +69,8 @@
       "id": "group-10",
       "type": "group",
       "parentId": "audience-personas",
-      "x": 1202.7375048413826,
-      "y": 398.56927724250994,
+      "x": 970.2375048413826,
+      "y": 323.56927724250994,
       "label": "Card Games",
       "description": "Here you find users personas for card games Like VIP baloot"
     },
@@ -78,8 +78,8 @@
       "id": "group-12",
       "type": "group",
       "parentId": "audience-personas",
-      "x": 1266.6187773434858,
-      "y": 530.6940531103098,
+      "x": 1034.1187773434858,
+      "y": 455.6940531103098,
       "label": "WOS Personas",
       "description": "This is the players Personas for the game War Of Sparta"
     },
@@ -87,8 +87,8 @@
       "id": "group-14",
       "type": "group",
       "parentId": "production-rules",
-      "x": 564.6469568727144,
-      "y": 381.82737589570337,
+      "x": 360.69367215922955,
+      "y": 269.0099851349345,
       "label": "Baloot Creative Direction",
       "description": ""
     },
@@ -96,17 +96,26 @@
       "id": "group-66",
       "type": "group",
       "parentId": "production-rules",
-      "x": 507.94805968726615,
-      "y": 598.9467714577986,
+      "x": 230.61768965048043,
+      "y": 577.1243930990662,
       "label": "dialect rules",
       "description": "THose are teh dialect rules for saudi ads"
+    },
+    {
+      "id": "group-69",
+      "type": "group",
+      "parentId": "production-rules",
+      "x": 351.16675381936705,
+      "y": 417.00323143982007,
+      "label": "WOS",
+      "description": ""
     },
     {
       "id": "thought-4",
       "type": "thought",
       "parentId": "group-3",
-      "x": 824.7106750089908,
-      "y": 193.5800769108083,
+      "x": 592.2106750089908,
+      "y": 118.58007691080829,
       "content": "Baloot Game info",
       "files": [
         {
@@ -120,8 +129,8 @@
       "id": "thought-7",
       "type": "thought",
       "parentId": "group-1",
-      "x": 1175.6969145085902,
-      "y": 151.50287716879535,
+      "x": 943.1969145085902,
+      "y": 76.50287716879535,
       "content": "",
       "files": []
     },
@@ -129,8 +138,8 @@
       "id": "thought-8",
       "type": "thought",
       "parentId": "group-1",
-      "x": 1068.9890839358575,
-      "y": 155.8594392866845,
+      "x": 836.4890839358575,
+      "y": 80.8594392866845,
       "content": "",
       "files": []
     },
@@ -138,8 +147,8 @@
       "id": "thought-11",
       "type": "thought",
       "parentId": "group-10",
-      "x": 1310.5735420511787,
-      "y": 169.23137393124216,
+      "x": 1078.0735420511787,
+      "y": 94.23137393124216,
       "content": "Baloot Jakroo User Personas",
       "files": [
         {
@@ -153,8 +162,8 @@
       "id": "thought-13",
       "type": "thought",
       "parentId": "group-12",
-      "x": 1391.8241917221526,
-      "y": 557.294884117373,
+      "x": 1159.3241917221526,
+      "y": 482.29488411737304,
       "content": "War of Sparta personas",
       "files": [
         {
@@ -168,8 +177,8 @@
       "id": "thought-15",
       "type": "thought",
       "parentId": "group-14",
-      "x": 427.098938196652,
-      "y": 292.64557640543705,
+      "x": 144.05231257579067,
+      "y": 230.87357019823793,
       "content": "This is the Creative Direction of VIP Baloot",
       "files": [
         {
@@ -183,8 +192,8 @@
       "id": "thought-48",
       "type": "thought",
       "parentId": "group-12",
-      "x": 1361.28695885879,
-      "y": 430.32546473765626,
+      "x": 1128.78695885879,
+      "y": 355.32546473765626,
       "content": "WOS players",
       "files": []
     },
@@ -192,8 +201,8 @@
       "id": "thought-50",
       "type": "thought",
       "parentId": "group-10",
-      "x": 1371.1427987522384,
-      "y": 322.77611597163764,
+      "x": 1138.6427987522384,
+      "y": 247.77611597163764,
       "content": "VIP Baloot players love horses",
       "files": []
     },
@@ -201,8 +210,8 @@
       "id": "thought-52",
       "type": "thought",
       "parentId": "group-14",
-      "x": 536.7217230470161,
-      "y": 258.94498997174725,
+      "x": 239.74624712787033,
+      "y": 180.80690574031442,
       "content": "for baloot ads stop saying the words :",
       "files": []
     },
@@ -210,8 +219,8 @@
       "id": "thought-54",
       "type": "thought",
       "parentId": "group-14",
-      "x": 388.58859064550654,
-      "y": 404.6360020894651,
+      "x": 149.35302987868624,
+      "y": 336.94529414086725,
       "content": "in baloot VIP ads , always say a classic saudi word",
       "files": []
     },
@@ -219,8 +228,8 @@
       "id": "thought-59",
       "type": "thought",
       "parentId": "group-5",
-      "x": 612.7045665449684,
-      "y": 177.48787460937973,
+      "x": 392.24510508582193,
+      "y": 51.49659294988908,
       "content": "",
       "files": []
     },
@@ -228,8 +237,8 @@
       "id": "thought-60",
       "type": "thought",
       "parentId": "group-5",
-      "x": 719.6011072127748,
-      "y": 168.76115756099227,
+      "x": 498.9142246017081,
+      "y": 62.021303776511445,
       "content": "",
       "files": []
     },
@@ -237,8 +246,8 @@
       "id": "thought-63",
       "type": "thought",
       "parentId": "group-14",
-      "x": 502.41789606525765,
-      "y": 492.12016932549795,
+      "x": 225.72009269487538,
+      "y": 442.4420838651351,
       "content": "in baloot ads don't say the word عيال",
       "files": []
     },
@@ -246,8 +255,8 @@
       "id": "thought-64",
       "type": "thought",
       "parentId": "group-10",
-      "x": 1435.388388262898,
-      "y": 238.63076358233462,
+      "x": 1202.888388262898,
+      "y": 163.63076358233462,
       "content": "baloot players love cars",
       "files": []
     },
@@ -255,8 +264,8 @@
       "id": "thought-65",
       "type": "thought",
       "parentId": "group-10",
-      "x": 1211.644000711013,
-      "y": 273.9027436695683,
+      "x": 979.144000711013,
+      "y": 198.90274366956828,
       "content": "BAloot players love golden cars",
       "files": []
     },
@@ -264,10 +273,40 @@
       "id": "thought-67",
       "type": "thought",
       "parentId": "group-66",
-      "x": 361.5250743929771,
-      "y": 596.1801052058446,
+      "x": 120.10078534678166,
+      "y": 516.6818013349475,
       "content": "",
       "files": []
+    },
+    {
+      "id": "thought-68",
+      "type": "thought",
+      "parentId": "group-5",
+      "x": 340.0300325087346,
+      "y": 146.0354008319938,
+      "content": "",
+      "files": [
+        {
+          "name": "war_of_sparta_game_info.txt",
+          "size": 5229,
+          "path": "storage/brain-files/thought-68/war_of_sparta_game_info.txt"
+        }
+      ]
+    },
+    {
+      "id": "thought-70",
+      "type": "thought",
+      "parentId": "group-69",
+      "x": 255.3334382153683,
+      "y": 337.56163009190647,
+      "content": "",
+      "files": [
+        {
+          "name": "war_of_sparta_creative_direction.txt",
+          "size": 12984,
+          "path": "storage/brain-files/thought-70/war_of_sparta_creative_direction.txt"
+        }
+      ]
     }
   ]
 }

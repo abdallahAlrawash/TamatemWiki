@@ -20,6 +20,10 @@
             <img class="tab-icon" src="/assets/Brain.png" alt="" aria-hidden="true" />
             <span class="tab-label">Brain</span>
           </button>
+          <button class="window-tab" type="button" data-window-tab="script-writer" aria-label="Script Writer">
+            <img class="tab-icon" src="/assets/edit.svg" alt="" aria-hidden="true" />
+            <span class="tab-label">Script Writer</span>
+          </button>
         </nav>
       </aside>
 
@@ -109,6 +113,43 @@
             </div>
             <p class="brain-footnote">Click a thought to read or edit it &middot; drag anything to rearrange</p>
             <input id="brain-file-input" type="file" multiple hidden />
+          </div>
+        </section>
+
+        <section
+          id="script-writer-window"
+          class="prompt-window window-panel"
+          data-window-panel="script-writer"
+          hidden
+        >
+          <div class="prompt-canvas">
+            <header class="prompt-header">
+              <button id="prompt-back" class="prompt-back" type="button" hidden>&larr; All writers</button>
+              <h2 id="prompt-title">Script Writer</h2>
+              <p id="prompt-path">Pick a writer to open its prompt</p>
+            </header>
+
+            <div class="prompt-toolbar">
+              <button id="prompt-upload" class="prompt-upload" type="button">Upload a prompt</button>
+              <input id="prompt-file-input" type="file" accept=".txt,.md,text/plain" hidden />
+            </div>
+
+            <div id="prompt-picker" class="prompt-picker" aria-label="Writers"></div>
+
+            <textarea
+              id="prompt-editor"
+              class="prompt-editor"
+              spellcheck="false"
+              placeholder="Loading the prompt..."
+              hidden
+            ></textarea>
+          </div>
+          <div id="prompt-composer" class="prompt-editor-composer" hidden>
+            <div class="prompt-editor-row">
+              <p id="prompt-status" class="prompt-status"></p>
+              <button id="prompt-save" class="prompt-save" type="button">Save</button>
+            </div>
+            <p class="prompt-footnote">Saving writes the prompt file and pushes it to the repo</p>
           </div>
         </section>
       </div>

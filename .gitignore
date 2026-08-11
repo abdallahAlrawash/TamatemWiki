@@ -9,3 +9,4 @@ storage/secrets/
 
 npm-debug.log*
 *.local
+.gstack/

@@ -1,0 +1,107 @@
+====================================================================
+WAR OF SPARTA — GAME INFORMATION SHEET
+====================================================================
+
+--------------------------------------------------------------------
+1. BASIC INFORMATION
+--------------------------------------------------------------------
+Title (EN):            War of Sparta
+Title (AR):            حرب سبارتا: انتقام الأبطال
+                       (also styled "حرب سبارتا: انتقام الملوك")
+                       Literal EN: "War of Sparta: Revenge of the Heroes"
+Genre:                 Strategy — MMO Real-Time Strategy (SLG / 4X);
+                       multiplayer, competitive multiplayer & single
+                       player modes
+Setting / Theme:       Ancient Greece / Spartan mythology; war against
+                       the Persian Empire
+Languages:             Arabic, English
+Platforms:             Android, iOS, Windows
+
+--------------------------------------------------------------------
+2. ABOUT THE GAME
+--------------------------------------------------------------------
+Amidst the endless clash of steel, you emerge as a Spartan leader
+who knows no fear. Your mission: forge Sparta into an unbreakable
+fortress, and train an army of warriors who never retreat. Form your
+iron phalanx, defy the might of the Persian Empire, and let the name
+of Sparta strike terror into the hearts of your enemies.
+"Glory or death — this is our law!"
+
+War of Sparta is a real strategy experience blending intelligence,
+planning and heroism, set in a world inspired by Greek myth and
+Spartan glory. Players build a kingdom, train heroes, and take part
+in epic real-time battles displayed live on a world map.
+
+--------------------------------------------------------------------
+3. KEY GAME FEATURES
+--------------------------------------------------------------------
+Core pillars:
+  • Strategy
+  • Build Your Senate (مجلس الشيوخ) — base / city building
+  • Attack & Conquer (الهجوم والسيطرة)
+  • Unlock Heroes / Leaders (القادة)
+
+Feature highlights:
+  • Real-time strategic battles — watch battles unfold live on the
+    map; command armies and heroes in the moment to turn the tide.
+    Manual or automatic control supported.
+  • Heroes & legends — diverse hero system with legendary characters,
+    each with unique abilities enabling endless strategy.
+  • Alliances & loyalty — form your own alliance or join powerful
+    kingdoms to control Mount Olympus; alliances are the core of
+    power and competition.
+  • Free resources & steady progress — earn diamonds and daily
+    rewards from special events; accessible reward system.
+  • Simple, engaging gameplay — smooth UI and streamlined design for
+    beginners and veterans alike.
+  • VIP membership — unique perks and special packages to help you
+    climb to the top of the kingdom.
+  • Fully Arabic experience — Arabic support, seasonal events tied to
+    Arab occasions, and the ability to decorate your city with your
+    country's flag.
+
+--------------------------------------------------------------------
+4. HEROES / CHARACTERS
+--------------------------------------------------------------------
+Named legendary heroes: Leonidas, Athena, Hercules, Spartacus.
+Each hero has unique abilities that unlock different strategies.
+Heroes lead the troops and fight for you ("Heroes Allegiance"),
+and can be leveled up to unlock new abilities and enhancements.
+
+--------------------------------------------------------------------
+5. GAMEPLAY & CORE MECHANICS
+--------------------------------------------------------------------
+Core loop:
+  • Build and develop your own Spartan city.
+  • Train troops and level up both heroes and units, unlocking new
+    abilities and enhancements as you progress.
+  • Defend your base against enemy attacks while planning raids —
+    success requires balancing offense and defense.
+  • Manage and gather resources to fund upgrades and research.
+
+Real-time battles:
+  • Battles play out live on the world map (a distinguishing feature
+    vs. typical strategy games) — you can watch and command in the
+    moment with manual or automatic control.
+
+Progression & systems:
+  • Key pillars: Resources, Upgrades, Heroes, and Leaderboard.
+  • Building, research and upgrades run on timers; higher-tier items
+    take longer and cost more materials (deep late-game grind).
+  • An action-points / energy system paces continuous play.
+
+Territory control:
+  • Temple and Olympus Hill offer a way to occupy and hold a kingdom.
+  • Alliances compete for control of Mount Olympus.
+
+Alliances & multiplayer:
+  • Form or join an alliance to wage large-scale wars.
+  • Receive monster boxes and cooperative rewards.
+  • Teleport your city closer to allies for mutual protection.
+
+Events & economy:
+  • Free-to-play with in-app purchases (freemium) and a VIP tier.
+  • Frequent events award diamonds and daily rewards; seasonal
+    events are tied to Arab occasions, and cities can be decorated
+    with a player's country flag.
+====================================================================
